@@ -39,11 +39,12 @@ animations = [{
 "speed": 9.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_dxdai"]
-radius = 13.038404
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ai16o"]
+size = Vector2(26.35136, 43.38235)
 
 [node name="PLAYER" type="CharacterBody2D"]
 position = Vector2(0, 41)
+scale = Vector2(1.4799993, 1.36)
 script = ExtResource("1_ai16o")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -55,5 +56,6 @@ frame = 3
 frame_progress = 0.5327049
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(1, 2)
-shape = SubResource("CircleShape2D_dxdai")
+position = Vector2(1.0135149, 6.25)
+scale = Vector2(1.0000001, 1.0000001)
+shape = SubResource("RectangleShape2D_ai16o")
