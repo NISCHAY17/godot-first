@@ -36,7 +36,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"IDLE",
-"speed": 9.0
+"speed": 11.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ai16o"]
@@ -48,12 +48,13 @@ scale = Vector2(1.4799993, 1.36)
 script = ExtResource("1_ai16o")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+z_index = 5
 position = Vector2(0.99999994, -9.000004)
 scale = Vector2(3.34375, 3.34375)
 sprite_frames = SubResource("SpriteFrames_pod2e")
 animation = &"IDLE"
-frame = 3
-frame_progress = 0.5327049
+autoplay = "IDLE"
+frame_progress = 0.30075994
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(1.0135149, 6.25)
