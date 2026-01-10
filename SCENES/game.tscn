@@ -287,6 +287,7 @@ tracks/1/keys = {
 
 [sub_resource type="Animation" id="Animation_5j11q"]
 length = 0.001
+loop_mode = 2
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -400,6 +401,14 @@ scale = Vector2(1.2400012, 1.3199999)
 
 [node name="coin6" parent="coins" instance=ExtResource("4_rmssh")]
 position = Vector2(2238, 419)
+scale = Vector2(1.2400012, 1.3199999)
+
+[node name="coin9" parent="coins" instance=ExtResource("4_rmssh")]
+position = Vector2(1317.0001, 360)
+scale = Vector2(1.2400012, 1.3199999)
+
+[node name="coin10" parent="coins" instance=ExtResource("4_rmssh")]
+position = Vector2(2056, 420)
 scale = Vector2(1.2400012, 1.3199999)
 
 [node name="PLATFORM3" parent="." instance=ExtResource("6_ltfqq")]
