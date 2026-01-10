@@ -45,6 +45,7 @@ size = Vector2(26.35136, 43.38235)
 [node name="PLAYER" type="CharacterBody2D"]
 position = Vector2(0, 41)
 scale = Vector2(1.4799993, 1.36)
+collision_layer = 2
 script = ExtResource("1_ai16o")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -54,7 +55,7 @@ scale = Vector2(3.34375, 3.34375)
 sprite_frames = SubResource("SpriteFrames_pod2e")
 animation = &"IDLE"
 autoplay = "IDLE"
-frame_progress = 0.30075994
+frame_progress = 0.38886446
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(1.0135149, 6.25)
