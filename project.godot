@@ -15,6 +15,10 @@ run/main_scene="uid://dyuag3bm4uhq4"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+GlobalAudioStreamPlayer="*res://SCENES/audio_stream_player.tscn"
+
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/godot_super-wakatime/plugin.cfg")
