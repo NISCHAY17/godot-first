@@ -1,8 +1,8 @@
 [gd_scene load_steps=10 format=3 uid="uid://daev2rlmfma4g"]
 
+[ext_resource type="Script" uid="uid://cwfmgcl7uox2u" path="res://SCENES/enemy.gd" id="1_drt3a"]
 [ext_resource type="Texture2D" uid="uid://4qkca1om2qa2" path="res://assets/brackeys_platformer_assets/sprites/slime_green.png" id="1_ne0yb"]
 [ext_resource type="PackedScene" uid="uid://bmybl5twxi5m6" path="res://SCENES/killzone.tscn" id="2_n00gh"]
-[ext_resource type="Script" uid="uid://c1kedh0cxgcfi" path="res://SCENES/collision_shape_2d.gd" id="3_gld7a"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_n00gh"]
 atlas = ExtResource("1_ne0yb")
@@ -40,28 +40,30 @@ animations = [{
 "speed": 10.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_n00gh"]
-size = Vector2(8.141826, 10)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gld7a"]
+size = Vector2(8.881991, 10.935974)
 
 [node name="enemy" type="Node2D"]
 position = Vector2(0, -17)
 scale = Vector2(2.7020967, 2.9261224)
+script = ExtResource("1_drt3a")
 
-[node name="RayCastright" type="RayCast2D" parent="."]
+[node name="RayCastrightRIGHT" type="RayCast2D" parent="."]
 position = Vector2(0, 5.9359746)
-target_position = Vector2(16.283651, -0.12623835)
+target_position = Vector2(13.322987, -0.12623824)
 
-[node name="RayCastright2" type="RayCast2D" parent="."]
+[node name="RayCastright2LEFT" type="RayCast2D" parent="."]
 position = Vector2(0, 5.9359746)
-target_position = Vector2(-17.023817, -0.12623835)
+target_position = Vector2(-13.322987, -0.46798742)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_83kiq")
+autoplay = "default"
+frame_progress = 0.831064
 
 [node name="killzone" parent="." instance=ExtResource("2_n00gh")]
-position = Vector2(0, 3.417492)
+position = Vector2(-1.1102489, 7.518482)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="killzone"]
-position = Vector2(0, 2.5184827)
-shape = SubResource("RectangleShape2D_n00gh")
-script = ExtResource("3_gld7a")
+position = Vector2(1.4803319, -2.3922443)
+shape = SubResource("RectangleShape2D_gld7a")
