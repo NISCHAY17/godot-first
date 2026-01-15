@@ -1,0 +1,48 @@
+[gd_scene load_steps=8 format=3 uid="uid://daev2rlmfma4g"]
+
+[ext_resource type="Texture2D" uid="uid://4qkca1om2qa2" path="res://assets/brackeys_platformer_assets/sprites/slime_green.png" id="1_ne0yb"]
+[ext_resource type="PackedScene" uid="uid://bmybl5twxi5m6" path="res://SCENES/killzone.tscn" id="2_n00gh"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n00gh"]
+atlas = ExtResource("1_ne0yb")
+region = Rect2(0, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gld7a"]
+atlas = ExtResource("1_ne0yb")
+region = Rect2(24, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_drt3a"]
+atlas = ExtResource("1_ne0yb")
+region = Rect2(48, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8puba"]
+atlas = ExtResource("1_ne0yb")
+region = Rect2(72, 24, 24, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_83kiq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n00gh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gld7a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_drt3a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8puba")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[node name="enemy" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_83kiq")
+
+[node name="killzone" parent="." instance=ExtResource("2_n00gh")]
+position = Vector2(3, 4)
