@@ -2,9 +2,10 @@ extends Area2D
 
 
 # Called when the node enters the scene tree for the first time.
+@onready var gamemanager: Node = %gamemanager
 
 
 
 func _on_body_entered(body: Node2D) -> void:
-	print("+ 1 COIN")
+	gamemanager.add_point()
 	queue_free()

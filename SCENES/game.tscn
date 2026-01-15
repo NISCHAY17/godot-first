@@ -1,11 +1,14 @@
-[gd_scene load_steps=22 format=3 uid="uid://dyuag3bm4uhq4"]
+[gd_scene load_steps=25 format=3 uid="uid://dyuag3bm4uhq4"]
 
 [ext_resource type="PackedScene" uid="uid://bjdw6auvyrjmy" path="res://SCENES/player.tscn" id="1_2sn7y"]
 [ext_resource type="Texture2D" uid="uid://b0sydsxgf6aed" path="res://assets/brackeys_platformer_assets/sprites/world_tileset.png" id="2_w4tjv"]
 [ext_resource type="PackedScene" uid="uid://cggiwl2vspm41" path="res://SCENES/platform.tscn" id="3_l2rif"]
+[ext_resource type="PackedScene" uid="uid://k1fjwaxojmky" path="res://SCENES/coin.tscn" id="4_rmssh"]
 [ext_resource type="PackedScene" uid="uid://bmybl5twxi5m6" path="res://SCENES/killzone.tscn" id="5_5m27e"]
 [ext_resource type="PackedScene" uid="uid://dapoaibjpin1l" path="res://SCENES/2platform.tscn" id="6_ltfqq"]
+[ext_resource type="FontFile" uid="uid://degh5no4q3oty" path="res://assets/brackeys_platformer_assets/fonts/PixelOperator8-Bold.ttf" id="7_5j11q"]
 [ext_resource type="PackedScene" uid="uid://daev2rlmfma4g" path="res://SCENES/enemy.tscn" id="7_ggca4"]
+[ext_resource type="Script" uid="uid://d274v4s77trtk" path="res://SCENES/gamemanager.gd" id="8_5j11q"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_l2rif"]
 texture = ExtResource("2_w4tjv")
@@ -366,7 +369,7 @@ position = Vector2(-2862, -27)
 metadata/_edit_horizontal_guides_ = [164.0]
 
 [node name="PLAYER" parent="." instance=ExtResource("1_2sn7y")]
-position = Vector2(2410, 520)
+position = Vector2(533, 493.00006)
 scale = Vector2(1.6, 1.6000049)
 
 [node name="Camera2D" type="Camera2D" parent="PLAYER"]
@@ -435,3 +438,49 @@ autoplay = "new_animation"
 
 [node name="enemy" parent="." instance=ExtResource("7_ggca4")]
 position = Vector2(2584, 677)
+
+[node name="Label" type="Label" parent="."]
+offset_left = 585.0
+offset_top = 505.0
+offset_right = 779.0
+offset_bottom = 521.0
+theme_override_colors/font_color = Color(0.47843137, 0.9607843, 1, 1)
+theme_override_fonts/font = ExtResource("7_5j11q")
+theme_override_font_sizes/font_size = 16
+text = "SPACE TO JUMP"
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 1937.0
+offset_top = 688.0
+offset_right = 2133.0
+offset_bottom = 704.0
+theme_override_colors/font_color = Color(0.47843137, 0.9607843, 1, 1)
+theme_override_fonts/font = ExtResource("7_5j11q")
+theme_override_font_sizes/font_size = 16
+text = "FALLING HURTS"
+
+[node name="Label3" type="Label" parent="."]
+offset_left = 2887.0
+offset_top = 439.0
+offset_right = 3207.0
+offset_bottom = 515.0
+theme_override_colors/font_color = Color(0.47843137, 0.9607843, 0.3529412, 1)
+theme_override_fonts/font = ExtResource("7_5j11q")
+theme_override_font_sizes/font_size = 24
+text = "REMEMBER TO 
+GET ALL COINS"
+
+[node name="gamemanager" type="Node" parent="."]
+unique_name_in_owner = true
+script = ExtResource("8_5j11q")
+
+[node name="coin" type="Node" parent="."]
+
+[node name="coin2" parent="coin" instance=ExtResource("4_rmssh")]
+position = Vector2(1041, 595)
+
+[node name="coin3" parent="coin" instance=ExtResource("4_rmssh")]
+position = Vector2(-2028, 603)
+
+[node name="coin" parent="coin" instance=ExtResource("4_rmssh")]
+position = Vector2(-2337, 602)
