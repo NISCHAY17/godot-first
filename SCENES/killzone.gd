@@ -2,10 +2,24 @@ extends Area2D
 
 @onready var timer: Timer = $Timer
 
-func _on_body_entered(_body: Node2D) -> void:
-	print(" U DIED :( ")
+func _on_body_entered(body: Node2D):
+	print("U DIED :(")
+	Engine.time_scale = 0.5
+
+	# Disable collision so it falls
+	var collision = body.get_node_or_null("CollisionShape2D")
+	if collision:
+		collision.disabled = true
+
+	# Make character red
+	var sprite = body.get_node_or_null("AnimatedSprite2D")
+	if sprite:
+		sprite.modulate = Color(1, 0.2, 0.3167)
+
 	timer.start()
 	
+
 func _on_timer_timeout() -> void:
+	Engine.time_scale = 1
 	get_tree().reload_current_scene()
 	print("reload")
