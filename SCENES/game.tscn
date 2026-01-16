@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://dyuag3bm4uhq4"]
+[gd_scene load_steps=28 format=3 uid="uid://dyuag3bm4uhq4"]
 
 [ext_resource type="PackedScene" uid="uid://bjdw6auvyrjmy" path="res://SCENES/player.tscn" id="1_2sn7y"]
 [ext_resource type="Texture2D" uid="uid://b0sydsxgf6aed" path="res://assets/brackeys_platformer_assets/sprites/world_tileset.png" id="2_w4tjv"]
@@ -237,6 +237,44 @@ _data = {
 &"new_animation_2": SubResource("Animation_ggca4")
 }
 
+[sub_resource type="Animation" id="Animation_3mqob"]
+resource_name = "new_animation"
+length = 3.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.87),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(3196, 742), Vector2(3208, 423.00003)]
+}
+
+[sub_resource type="Animation" id="Animation_s6nxh"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(3196, 742)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qmtrq"]
+_data = {
+&"RESET": SubResource("Animation_s6nxh"),
+&"new_animation": SubResource("Animation_3mqob")
+}
+
 [sub_resource type="Animation" id="Animation_rmssh"]
 length = 0.001
 tracks/0/type = "value"
@@ -369,7 +407,7 @@ position = Vector2(-2862, -27)
 metadata/_edit_horizontal_guides_ = [164.0]
 
 [node name="PLAYER" parent="." instance=ExtResource("1_2sn7y")]
-position = Vector2(3857, -935.0001)
+position = Vector2(677, 412)
 scale = Vector2(1.6, 1.6000049)
 
 [node name="Camera2D" type="Camera2D" parent="PLAYER"]
@@ -403,9 +441,9 @@ scale = Vector2(3.4137726, 3.6139448)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="PLATFORM3"]
 libraries = {
-&"": SubResource("AnimationLibrary_ggca4")
+&"": SubResource("AnimationLibrary_qmtrq")
 }
-autoplay = "new_animation_2"
+autoplay = "new_animation"
 
 [node name="PLATFORM2" parent="." instance=ExtResource("3_l2rif")]
 position = Vector2(1926, 605)
@@ -460,15 +498,25 @@ theme_override_font_sizes/font_size = 16
 text = "FALLING HURTS"
 
 [node name="Label3" type="Label" parent="."]
-offset_left = 2887.0
-offset_top = 439.0
-offset_right = 3207.0
-offset_bottom = 515.0
+offset_left = 2877.0
+offset_top = 430.0
+offset_right = 3197.0
+offset_bottom = 506.0
 theme_override_colors/font_color = Color(0.47843137, 0.9607843, 0.3529412, 1)
 theme_override_fonts/font = ExtResource("7_5j11q")
 theme_override_font_sizes/font_size = 24
 text = "REMEMBER TO 
 GET ALL COINS"
+
+[node name="Label4" type="Label" parent="."]
+offset_left = 2439.0
+offset_top = 562.0
+offset_right = 3108.0
+offset_bottom = 606.0
+theme_override_colors/font_color = Color(0.90588236, 0.9372549, 0.32941177, 1)
+theme_override_fonts/font = ExtResource("7_5j11q")
+theme_override_font_sizes/font_size = 19
+text = "This slime thing can k*ll you lol"
 
 [node name="gamemanager" type="Node" parent="."]
 unique_name_in_owner = true
@@ -497,10 +545,73 @@ text = "U HAVE X COINS"
 [node name="coin" type="Node" parent="."]
 
 [node name="coin2" parent="coin" instance=ExtResource("4_rmssh")]
-position = Vector2(1041, 595)
+position = Vector2(1412, 484)
 
 [node name="coin3" parent="coin" instance=ExtResource("4_rmssh")]
+position = Vector2(1032, 603)
+
+[node name="coin5" parent="coin" instance=ExtResource("4_rmssh")]
 position = Vector2(-2028, 603)
+
+[node name="coin6" parent="coin" instance=ExtResource("4_rmssh")]
+position = Vector2(-2520, 361)
+
+[node name="coin7" parent="coin" instance=ExtResource("4_rmssh")]
+position = Vector2(-2090, 235)
+
+[node name="coin8" parent="coin" instance=ExtResource("4_rmssh")]
+position = Vector2(-1901, 299)
+
+[node name="coin9" parent="coin" instance=ExtResource("4_rmssh")]
+position = Vector2(-1414, 303)
+
+[node name="coin10" parent="coin" instance=ExtResource("4_rmssh")]
+position = Vector2(-1224, 418)
+
+[node name="coin11" parent="coin" instance=ExtResource("4_rmssh")]
+position = Vector2(-1102, 547)
+
+[node name="coin12" parent="coin" instance=ExtResource("4_rmssh")]
+position = Vector2(-1536, 608)
+
+[node name="coin13" parent="coin" instance=ExtResource("4_rmssh")]
+position = Vector2(-615, 418)
+
+[node name="coin14" parent="coin" instance=ExtResource("4_rmssh")]
+position = Vector2(120, 611)
+
+[node name="coin15" parent="coin" instance=ExtResource("4_rmssh")]
+position = Vector2(437, 656)
+
+[node name="coin16" parent="coin" instance=ExtResource("4_rmssh")]
+position = Vector2(427, 292)
+
+[node name="coin17" parent="coin" instance=ExtResource("4_rmssh")]
+position = Vector2(617, 294)
+
+[node name="coin18" parent="coin" instance=ExtResource("4_rmssh")]
+position = Vector2(980, 56)
+
+[node name="coin19" parent="coin" instance=ExtResource("4_rmssh")]
+position = Vector2(1291, 55)
+
+[node name="coin20" parent="coin" instance=ExtResource("4_rmssh")]
+position = Vector2(2025, 477)
+
+[node name="coin21" parent="coin" instance=ExtResource("4_rmssh")]
+position = Vector2(2583, 354)
+
+[node name="coin22" parent="coin" instance=ExtResource("4_rmssh")]
+position = Vector2(3255, 301)
+
+[node name="coin23" parent="coin" instance=ExtResource("4_rmssh")]
+position = Vector2(3754, 234)
+
+[node name="coin24" parent="coin" instance=ExtResource("4_rmssh")]
+position = Vector2(3630, -194)
+
+[node name="coin4" parent="coin" instance=ExtResource("4_rmssh")]
+position = Vector2(-1662, 537)
 
 [node name="coin" parent="coin" instance=ExtResource("4_rmssh")]
 position = Vector2(-2337, 602)
