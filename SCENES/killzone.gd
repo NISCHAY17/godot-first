@@ -1,10 +1,16 @@
 extends Area2D
 
 @onready var timer: Timer = $Timer
+@onready var death_sound: AudioStreamPlayer = $DeathSound
 
 func _on_body_entered(body: Node2D):
 	print("U DIED :(")
 	Engine.time_scale = 0.5
+	
+	if death_sound:
+		death_sound.play()
+	
+
 
 	# Disable collision so it falls
 	var collision = body.get_node_or_null("CollisionShape2D")
