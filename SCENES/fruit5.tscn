@@ -1,12 +1,16 @@
-[gd_scene load_steps=3 format=3 uid="uid://43wly54ri3wh"]
+[gd_scene load_steps=4 format=3 uid="uid://43wly54ri3wh"]
 
 [ext_resource type="Texture2D" uid="uid://hmlqwy4vcido" path="res://assets/brackeys_platformer_assets/sprites/fruit.png" id="1_d4rwv"]
+[ext_resource type="Script" uid="uid://dxgu2s7pc78ms" path="res://scripts/FruitBase.gd" id="1_innej"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_kko8i"]
 radius = 12.95156
 
-[node name="fruit" type="Node2D"]
+[node name="fruit" type="Area2D"]
 scale = Vector2(1.7758479, 1.7758479)
+script = ExtResource("1_innej")
+fruit_id = "5"
+fruit_name = "pearorange"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_kko8i")

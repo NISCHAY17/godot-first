@@ -5,7 +5,7 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_kko8i"]
 radius = 12.95156
 
-[node name="fruit" type="Node2D"]
+[node name="fruit" type="Area2D"]
 scale = Vector2(1.7758479, 1.7758479)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
