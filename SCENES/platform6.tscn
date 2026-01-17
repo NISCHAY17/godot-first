@@ -1,0 +1,37 @@
+[gd_scene load_steps=3 format=3 uid="uid://bg4hmr2ir68ur"]
+
+[ext_resource type="Texture2D" uid="uid://iql4dcfphrqy" path="res://assets/fourSeasonsPlatformer_ [tileset, version 2.0]/objects_/staticObjects_.png" id="1_gac5e"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v4gyq"]
+size = Vector2(65.67435, 10.630958)
+
+[node name="PLATFORM" type="AnimatableBody2D"]
+scale = Vector2(2.3600006, 2.0399992)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_gac5e")
+region_enabled = true
+region_rect = Rect2(160, 118, 48, 10)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.42372864, 1.4901161e-08)
+scale = Vector2(1.0000001, 1)
+shape = SubResource("RectangleShape2D_v4gyq")
+one_way_collision = true
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(-45.961777, -35.18796)
+rotation = 1.3048687
+scale = Vector2(1.0000001, 1)
+shape = SubResource("RectangleShape2D_v4gyq")
+one_way_collision = true
+one_way_collision_margin = 60.5
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
+position = Vector2(55.50846, -29.411777)
+rotation = -0.9868146
+scale = Vector2(1.0000001, 1)
+shape = SubResource("RectangleShape2D_v4gyq")
+one_way_collision = true
+one_way_collision_margin = 55.5
+debug_color = Color(0.84699875, 0.23946634, 0.7258968, 0.41960785)
