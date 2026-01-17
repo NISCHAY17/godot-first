@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://cllhe86x4tk60" path="res://assets/brackeys_platformer_assets/sprites/platforms.png" id="1_k0whr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v4gyq"]
-size = Vector2(31, 7)
+size = Vector2(35.169487, 10.784319)
 
 [node name="PLATFORM" type="AnimatableBody2D"]
 scale = Vector2(2.3600006, 2.0399992)
@@ -14,6 +14,7 @@ region_enabled = true
 region_rect = Rect2(16, 48, 32, 9)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0.5, -0.5)
+position = Vector2(-0.6355945, 0.98039293)
+scale = Vector2(1.0000001, 1)
 shape = SubResource("RectangleShape2D_v4gyq")
 one_way_collision = true
