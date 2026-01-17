@@ -1,0 +1,47 @@
+[gd_scene load_steps=7 format=3 uid="uid://dp11xymt31kcv"]
+
+[ext_resource type="Texture2D" uid="uid://ibl5dr4kecqw" path="res://SCENES/cloud22.png" id="1_0jrtc"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4bbjn"]
+atlas = ExtResource("1_0jrtc")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2wg6o"]
+atlas = ExtResource("1_0jrtc")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hxpo2"]
+atlas = ExtResource("1_0jrtc")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l6cv3"]
+atlas = ExtResource("1_0jrtc")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rqv68"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4bbjn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2wg6o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hxpo2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l6cv3")
+}],
+"loop": true,
+"name": &"default",
+"speed": 4.0
+}]
+
+[node name="clouds" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(16.962698, 9.625667)
+sprite_frames = SubResource("SpriteFrames_rqv68")
+autoplay = "default"
+frame_progress = 0.29196182
