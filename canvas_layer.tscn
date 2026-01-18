@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://3tt68yksacpi" path="res://node_2d.gd" id="1_v2lfg"]
 
-[node name="CanvasLayer" type="CanvasLayer"]
+[node name="SceneTransition" type="CanvasLayer"]
 script = ExtResource("1_v2lfg")
 
 [node name="ColorRect" type="ColorRect" parent="."]

@@ -174,7 +174,9 @@ _data = {
 &"new_animation": SubResource("Animation_2byv0")
 }
 
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_tplj5"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m2xw5"]
+custom_solver_bias = 0.106
+size = Vector2(2815.625, 210.31177)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_l2rif"]
 texture = ExtResource("2_w4tjv")
@@ -4280,13 +4282,20 @@ libraries = {
 }
 autoplay = "new_animation"
 
-[node name="EndTrigger" type="Area2D" parent="cloud"]
-position = Vector2(-1659, -6544)
-scale = Vector2(1.6, 1.6000049)
+[node name="EndTrigger" type="Area2D" parent="cloud" node_paths=PackedStringArray("player")]
+z_index = 16
+position = Vector2(-1445, -6255)
+scale = Vector2(1.5999999, 1.6000049)
+collision_layer = 4
+collision_mask = 2
 script = ExtResource("5_m2xw5")
+player = NodePath("../../PLAYER")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="cloud/EndTrigger"]
-shape = SubResource("WorldBoundaryShape2D_tplj5")
+z_index = 16
+position = Vector2(-552.8125, -28.125)
+shape = SubResource("RectangleShape2D_m2xw5")
+debug_color = Color(0.95285386, 0, 0.5506369, 0.41960785)
 
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2(495, 837)
@@ -4321,7 +4330,7 @@ script = ExtResource("21_m2xw5")
 player_path = NodePath("../PLAYER")
 
 [node name="PLAYER" parent="." instance=ExtResource("1_2sn7y")]
-position = Vector2(1360, -5366)
+position = Vector2(1281, -5359)
 scale = Vector2(1.6, 1.6000049)
 
 [node name="Camera2D" type="Camera2D" parent="PLAYER"]
@@ -4535,7 +4544,7 @@ position = Vector2(-3201, -4567)
 position = Vector2(-922, -5295)
 
 [node name="coin63" parent="coin" instance=ExtResource("4_rmssh")]
-position = Vector2(-922, -5295)
+position = Vector2(-1763, -5294)
 
 [node name="coin64" parent="coin" instance=ExtResource("4_rmssh")]
 position = Vector2(-800, -5297)
@@ -4731,6 +4740,7 @@ autoplay = "new_animation"
 z_index = 3
 position = Vector2(1531.0001, -5271.0005)
 scale = Vector2(3.5600104, 2.6149724)
+collision_mask = 2
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="PLATFORM7"]
 libraries = {

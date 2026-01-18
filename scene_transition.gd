@@ -1,11 +1,18 @@
-extends Node
+extends CanvasLayer
 
+@onready var fade_rect = $ColorRect
+var busy := false
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
+func fade_to_scene(scene_path: String, duration := 1.2):
+	if busy:
+		return
+	busy = true
 
+	fade_rect.visible = true
+	fade_rect.modulate.a = 0.0
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+	var t = create_tween()
+	t.tween_property(fade_rect, "modulate:a", 1.0, duration)
+	await t.finished
+
+	get_tree().change_scene_to_file(scene_path)
