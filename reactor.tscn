@@ -14,13 +14,14 @@ size = Vector2(20, 41)
 [node name="REACTOR" type="Sprite2D"]
 script = ExtResource("1_odo1g")
 
-[node name="Detector" type="Area2D" parent="."]
+[node name="detector" type="Area2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Detector"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="detector"]
 position = Vector2(0.5, -0.5)
 shape = SubResource("RectangleShape2D_odo1g")
 
 [node name="Timer" type="Timer" parent="."]
+process_callback = 0
 wait_time = 2.0
 autostart = true
 
@@ -30,6 +31,7 @@ region_enabled = true
 region_rect = Rect2(128, 160, 32, 64)
 
 [node name="ON" type="Sprite2D" parent="."]
+visible = false
 texture = ExtResource("2_1tjbl")
 region_enabled = true
 region_rect = Rect2(160, 160, 32, 64)
