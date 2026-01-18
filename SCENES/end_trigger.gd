@@ -28,4 +28,5 @@ func _on_body_entered(body):
 	triggered = true
 	print("[EndTrigger]  Player detected → Loading next scene")
 
+
 	get_tree().change_scene_to_file(next_scene)
