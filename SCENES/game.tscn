@@ -1,4 +1,4 @@
-[gd_scene load_steps=106 format=3 uid="uid://dyuag3bm4uhq4"]
+[gd_scene load_steps=108 format=3 uid="uid://dyuag3bm4uhq4"]
 
 [ext_resource type="PackedScene" uid="uid://bjdw6auvyrjmy" path="res://SCENES/player.tscn" id="1_2sn7y"]
 [ext_resource type="Texture2D" uid="uid://cu468udiuj5cq" path="res://assets/fourSeasonsPlatformer_ [tileset, version 2.0]/background_/desertDungeon_.png" id="1_gihg8"]
@@ -34,6 +34,8 @@
 [ext_resource type="PackedScene" uid="uid://m5kwk4l6yf4w" path="res://SCENES/enemy2.tscn" id="23_wmg3d"]
 [ext_resource type="Script" uid="uid://dxgu2s7pc78ms" path="res://scripts/FruitBase.gd" id="25_x3kbu"]
 [ext_resource type="PackedScene" uid="uid://c1kstdwxm3xbq" path="res://SCENES/platform5.tscn" id="28_xrvo1"]
+[ext_resource type="PackedScene" uid="uid://b74oqndbhvr8o" path="res://SCENES/platform_7.tscn" id="35_m2xw5"]
+[ext_resource type="PackedScene" uid="uid://blk3vo7medjic" path="res://reactor.tscn" id="36_tplj5"]
 
 [sub_resource type="Animation" id="Animation_4x1cc"]
 length = 0.001
@@ -4726,3 +4728,10 @@ libraries = {
 &"": SubResource("AnimationLibrary_su5uj")
 }
 autoplay = "new_animation"
+
+[node name="PLATFORM 7" parent="." instance=ExtResource("35_m2xw5")]
+position = Vector2(1891.75, -5399)
+
+[node name="REACTOR" parent="." instance=ExtResource("36_tplj5")]
+position = Vector2(1160, -5417)
+scale = Vector2(5.4, 5.4)
