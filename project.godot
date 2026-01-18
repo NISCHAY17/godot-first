@@ -11,13 +11,14 @@ config_version=5
 [application]
 
 config/name="First Game"
-run/main_scene="uid://k5f0c3m3rg6v"
+run/main_scene="uid://dyuag3bm4uhq4"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
 
 GlobalAudioStreamPlayer="*res://SCENES/audio_stream_player.tscn"
+SceneTransition="*res://scene_transition.gd"
 
 [editor_plugins]
 

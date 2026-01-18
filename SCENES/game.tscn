@@ -14,6 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://k1fjwaxojmky" path="res://SCENES/coin.tscn" id="4_rmssh"]
 [ext_resource type="Texture2D" uid="uid://d1y7v6jw7ils5" path="res://images/Clouds5.png" id="4_tplj5"]
 [ext_resource type="PackedScene" uid="uid://bmybl5twxi5m6" path="res://SCENES/killzone.tscn" id="5_5m27e"]
+[ext_resource type="Script" uid="uid://jn3tr6850jal" path="res://SCENES/end_trigger.gd" id="5_m2xw5"]
 [ext_resource type="Texture2D" uid="uid://c6lc7pijurjuw" path="res://assets/fourSeasonsPlatformer_ [tileset, version 2.0]/foreground_/foreground_.png" id="5_yqmr7"]
 [ext_resource type="Texture2D" uid="uid://b8k78ea3kitf6" path="res://assets/fourSeasonsPlatformer_ [tileset, version 2.0]/midground_/autumn_.png" id="6_5t354"]
 [ext_resource type="FontFile" uid="uid://degh5no4q3oty" path="res://assets/brackeys_platformer_assets/fonts/PixelOperator8-Bold.ttf" id="7_5j11q"]
@@ -34,8 +35,6 @@
 [ext_resource type="PackedScene" uid="uid://m5kwk4l6yf4w" path="res://SCENES/enemy2.tscn" id="23_wmg3d"]
 [ext_resource type="Script" uid="uid://dxgu2s7pc78ms" path="res://scripts/FruitBase.gd" id="25_x3kbu"]
 [ext_resource type="PackedScene" uid="uid://c1kstdwxm3xbq" path="res://SCENES/platform5.tscn" id="28_xrvo1"]
-[ext_resource type="PackedScene" uid="uid://b74oqndbhvr8o" path="res://SCENES/platform_7.tscn" id="35_m2xw5"]
-[ext_resource type="PackedScene" uid="uid://blk3vo7medjic" path="res://reactor.tscn" id="36_tplj5"]
 
 [sub_resource type="Animation" id="Animation_4x1cc"]
 length = 0.001
@@ -174,6 +173,8 @@ _data = {
 &"RESET": SubResource("Animation_4cxwd"),
 &"new_animation": SubResource("Animation_2byv0")
 }
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_tplj5"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_l2rif"]
 texture = ExtResource("2_w4tjv")
@@ -4279,6 +4280,14 @@ libraries = {
 }
 autoplay = "new_animation"
 
+[node name="EndTrigger" type="Area2D" parent="cloud"]
+position = Vector2(-1659, -6544)
+scale = Vector2(1.6, 1.6000049)
+script = ExtResource("5_m2xw5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cloud/EndTrigger"]
+shape = SubResource("WorldBoundaryShape2D_tplj5")
+
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2(495, 837)
 scale = Vector2(3.840001, 3.8)
@@ -4728,10 +4737,3 @@ libraries = {
 &"": SubResource("AnimationLibrary_su5uj")
 }
 autoplay = "new_animation"
-
-[node name="PLATFORM 7" parent="." instance=ExtResource("35_m2xw5")]
-position = Vector2(1891.75, -5399)
-
-[node name="REACTOR" parent="." instance=ExtResource("36_tplj5")]
-position = Vector2(1160, -5417)
-scale = Vector2(5.4, 5.4)
