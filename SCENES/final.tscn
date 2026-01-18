@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://k5f0c3m3rg6v"]
+[gd_scene load_steps=23 format=3 uid="uid://k5f0c3m3rg6v"]
 
 [ext_resource type="PackedScene" uid="uid://bjdw6auvyrjmy" path="res://SCENES/player.tscn" id="1_d1l83"]
 [ext_resource type="Texture2D" uid="uid://b3j20hshyd14u" path="res://lab_tileset_LITE/lab_tileset_LITE.png" id="1_uia0n"]
@@ -6,6 +6,7 @@
 [ext_resource type="Script" uid="uid://nv3eawdbb3hg" path="res://SCENES/compt.gd" id="3_wsuxp"]
 [ext_resource type="Texture2D" uid="uid://be7m82k2n66ny" path="res://assets/Foozle_2DT0001_Science_Fiction_Labs_Tileset/Tileset/platform_moving.png" id="4_d1l83"]
 [ext_resource type="PackedScene" uid="uid://blk3vo7medjic" path="res://reactor.tscn" id="4_gme3p"]
+[ext_resource type="Texture2D" uid="uid://dg7go48ddef2" path="res://assets/computer.png" id="5_v42hs"]
 [ext_resource type="PackedScene" uid="uid://cp1c82rfbkupq" path="res://SCENES/platform69.tscn" id="7_j2nwm"]
 [ext_resource type="PackedScene" uid="uid://bmybl5twxi5m6" path="res://SCENES/killzone.tscn" id="8_qf2m7"]
 [ext_resource type="AudioStream" uid="uid://c20p7yilwsnqb" path="res://assets/gloomy-atmosphere-for-trailers-and-movies-179445.mp3" id="9_kegqd"]
@@ -1359,6 +1360,11 @@ player = NodePath("../PLAYER")
 position = Vector2(-21.460938, 0)
 scale = Vector2(1.0000002, 1)
 shape = SubResource("RectangleShape2D_kegqd")
+
+[node name="Computer" type="Sprite2D" parent="compt"]
+position = Vector2(-14.474884, 42.972015)
+scale = Vector2(0.38838768, 0.38838768)
+texture = ExtResource("5_v42hs")
 
 [node name="AnimatableBody2D" type="AnimatableBody2D" parent="."]
 z_index = 12
