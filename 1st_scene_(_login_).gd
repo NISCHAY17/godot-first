@@ -4,8 +4,9 @@ extends Node2D
 @onready var pass_field: LineEdit = $PassField
 @onready var status: Label = $Status
 @onready var submit_btn: Button = $Button
-@onready var main: Node2D = $"../MAIN"
 @onready var loading: Node2D = %LOADING
+@onready var main_welcome_: Node2D = $"../MAIN(WELCOME)"
+@onready var main: Node2D = $"../MAIN"
 
 const CORRECT_USER = "admin"
 const CORRECT_PASS = "evilcrop"
@@ -51,5 +52,7 @@ func transition_to_main():
 
 	# Hide loading
 	loading.visible = false
-
-	main.visible = true
+	main_welcome_.visible = true
+	await get_tree().create_timer(7.0).timeout
+	main_welcome_.visible = false
+	main.visible = true 
