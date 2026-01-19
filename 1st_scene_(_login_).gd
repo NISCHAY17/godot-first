@@ -4,8 +4,9 @@ extends Node2D
 @onready var pass_field: LineEdit = $PassField
 @onready var status: Label = $Status
 @onready var submit_btn: Button = $Button
+@onready var main: Node2D = $"../MAIN"
+@onready var loading: Node2D = %LOADING
 
-# to  Change these later
 const CORRECT_USER = "admin"
 const CORRECT_PASS = "evilcrop"
 
@@ -30,10 +31,25 @@ func _on_submit_pressed():
 		status.modulate = Color.GREEN
 		print("[LOGIN] ✅ Access granted")
 
-		# Tell parent to switch screen
-		get_parent().show_main()
+		await transition_to_main()
 
 	else:
 		status.text = "> ACCESS DENIED"
 		status.modulate = Color.RED
 		print("[LOGIN] ❌ Access denied")
+
+
+func transition_to_main():
+	#  login
+	visible = false
+
+	#  loading
+	loading.visible = true
+
+	#  delay
+	await get_tree().create_timer(5.0).timeout
+
+	# Hide loading
+	loading.visible = false
+
+	main.visible = true

@@ -445,7 +445,7 @@ position = Vector2(13, -111)
 scale = Vector2(4.3981667, 4.3981667)
 sprite_frames = SubResource("SpriteFrames_2glqh")
 autoplay = "default"
-frame_progress = 0.25069723
+frame_progress = 0.9019721
 
 [node name="MAIN" type="Node2D" parent="."]
 visible = false
