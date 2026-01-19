@@ -1,4 +1,4 @@
-[gd_scene load_steps=109 format=3 uid="uid://dyuag3bm4uhq4"]
+[gd_scene load_steps=108 format=3 uid="uid://dyuag3bm4uhq4"]
 
 [ext_resource type="PackedScene" uid="uid://bjdw6auvyrjmy" path="res://SCENES/player.tscn" id="1_2sn7y"]
 [ext_resource type="Texture2D" uid="uid://cu468udiuj5cq" path="res://assets/fourSeasonsPlatformer_ [tileset, version 2.0]/background_/desertDungeon_.png" id="1_gihg8"]
@@ -19,7 +19,6 @@
 [ext_resource type="Texture2D" uid="uid://b8k78ea3kitf6" path="res://assets/fourSeasonsPlatformer_ [tileset, version 2.0]/midground_/autumn_.png" id="6_5t354"]
 [ext_resource type="FontFile" uid="uid://degh5no4q3oty" path="res://assets/brackeys_platformer_assets/fonts/PixelOperator8-Bold.ttf" id="7_5j11q"]
 [ext_resource type="PackedScene" uid="uid://daev2rlmfma4g" path="res://SCENES/enemy.tscn" id="7_ggca4"]
-[ext_resource type="Script" uid="uid://d274v4s77trtk" path="res://SCENES/gamemanager.gd" id="8_5j11q"]
 [ext_resource type="PackedScene" uid="uid://dkg78vg4m5hpa" path="res://SCENES/platform4.tscn" id="8_63oq4"]
 [ext_resource type="Texture2D" uid="uid://4acochibcw3a" path="res://assets/fourSeasonsPlatformer_ [tileset, version 2.0]/midground_/summer_.png" id="8_wmg3d"]
 [ext_resource type="Texture2D" uid="uid://b8iphksct32vb" path="res://assets/fourSeasonsPlatformer_ [tileset, version 2.0]/midground_/winter_.png" id="9_13r1y"]
@@ -4331,7 +4330,7 @@ script = ExtResource("21_m2xw5")
 player_path = NodePath("../PLAYER")
 
 [node name="PLAYER" parent="." instance=ExtResource("1_2sn7y")]
-position = Vector2(583, 478)
+position = Vector2(-1180, -3894)
 scale = Vector2(1.6, 1.6000049)
 
 [node name="Camera2D" type="Camera2D" parent="PLAYER"]
@@ -4352,30 +4351,6 @@ debug_color = Color(0.8763094, 0.20573938, 0.68470824, 0.41960785)
 
 [node name="enemy" parent="." instance=ExtResource("7_ggca4")]
 position = Vector2(2616, 680.99994)
-
-[node name="gamemanager" type="Node" parent="."]
-unique_name_in_owner = true
-script = ExtResource("8_5j11q")
-
-[node name="Label" type="Label" parent="gamemanager"]
-offset_left = 690.0
-offset_top = -1209.0
-offset_right = 1564.0
-offset_bottom = -1097.0
-theme_override_colors/font_color = Color(0.7722888, 0.9029569, 0.95370823, 1)
-theme_override_fonts/font = ExtResource("7_5j11q")
-theme_override_font_sizes/font_size = 111
-text = "U MADE IT"
-
-[node name="COINSCORE" type="Label" parent="gamemanager"]
-offset_left = 695.0
-offset_top = -1070.0
-offset_right = 2056.0
-offset_bottom = -958.0
-theme_override_colors/font_color = Color(0.7722888, 0.9029569, 0.95370823, 1)
-theme_override_fonts/font = ExtResource("7_5j11q")
-theme_override_font_sizes/font_size = 111
-text = "U HAVE X COINS"
 
 [node name="coin" type="Node" parent="."]
 
@@ -4750,7 +4725,8 @@ libraries = {
 autoplay = "new_animation"
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-position = Vector2(605, -7665)
+position = Vector2(2202, -3492.0002)
 scale = Vector2(1.5999999, 1.6000049)
 stream = ExtResource("36_tplj5")
 autoplay = true
+max_distance = 4096.0

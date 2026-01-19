@@ -1446,18 +1446,18 @@ autoplay = true
 bus = &"sf"
 
 [node name="Node2D" type="Node2D" parent="."]
-position = Vector2(-720.7296, -452.01526)
+position = Vector2(142.0344, -494.2417)
 scale = Vector2(0.99999994, 0.99999994)
 script = ExtResource("11_r5fas")
 
 [node name="CoinsLabel" type="Label" parent="Node2D"]
-offset_left = 202.49539
-offset_top = 23.992323
-offset_right = 242.49539
-offset_bottom = 46.992325
+offset_left = 329.17474
+offset_top = -25.911772
+offset_right = 369.17474
+offset_bottom = -2.9117718
 
 [node name="FruitsLabel" type="Label" parent="Node2D"]
-offset_left = 242.80247
-offset_top = 45.105568
-offset_right = 282.80246
-offset_bottom = 68.10557
+offset_left = 229.36665
+offset_top = -17.274536
+offset_right = 269.36664
+offset_bottom = 5.725464

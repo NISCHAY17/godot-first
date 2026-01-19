@@ -18,6 +18,8 @@ config/icon="res://icon.svg"
 [autoload]
 
 SceneTransition="*res://SceneTransition.gd"
+Gamemanager="*res://SCENES/gamemanager.gd"
+Coin="*res://scripts/coin.gd"
 
 [display]
 
