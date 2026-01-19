@@ -50,8 +50,8 @@ func update_state():
 
 func _on_body_entered(body):
 	something_inside = true
-	print("Something inside detector ✅")
+	print("Something inside detector")
 
 func _on_body_exited(body):
 	something_inside = false
-	print("Detector empty ❌")
+	print("Detector empty")

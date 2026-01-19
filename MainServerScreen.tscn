@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://cnlwlbso8beec"]
+[gd_scene load_steps=17 format=3 uid="uid://cnlwlbso8beec"]
 
 [ext_resource type="Texture2D" uid="uid://ws3wtrvovjva" path="res://assets/custum made/Untitled design (53).png" id="1_doe0h"]
 [ext_resource type="Script" uid="uid://o3j5fx36td2" path="res://left_panel.gd" id="2_xod8n"]
@@ -11,7 +11,9 @@
 [ext_resource type="FontFile" uid="uid://w7a01wihhtpv" path="res://assets/custum made/Geist/otf/Geist-BlackItalic.otf" id="8_g6hpd"]
 [ext_resource type="FontFile" uid="uid://brgu1gv7ptgc4" path="res://assets/custum made/Geist/otf/Geist-RegularItalic.otf" id="9_yxj2f"]
 [ext_resource type="FontFile" uid="uid://d3r32b2xir63x" path="res://assets/custum made/Geist/otf/Geist-LightItalic.otf" id="10_an2yv"]
+[ext_resource type="Script" uid="uid://cjf8hd7acr52t" path="res://rich_text_label.gd" id="12_an2yv"]
 [ext_resource type="Script" uid="uid://b3pgetwj4shs4" path="res://bottom_panel.gd" id="12_yxj2f"]
+[ext_resource type="Script" uid="uid://dymmkk6pxuq84" path="res://testforsyslogs.gd" id="13_wxtb8"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sq541"]
 texture = ExtResource("1_doe0h")
@@ -252,16 +254,31 @@ texture = ExtResource("7_g6hpd")
 position = Vector2(276, -283)
 
 [node name="RichTextLabel" type="RichTextLabel" parent="RightPanel"]
+visible = false
 offset_left = -135.0
 offset_right = -95.0
 offset_bottom = 40.0
-scale = Vector2(8.262974, 7.978674)
+scale = Vector2(2.4696918, 3.2276292)
 theme_override_fonts/normal_font = ExtResource("5_gdgqh")
 theme_override_fonts/bold_font = ExtResource("7_gh0rq")
 theme_override_fonts/bold_italics_font = ExtResource("8_g6hpd")
 theme_override_fonts/italics_font = ExtResource("9_yxj2f")
 theme_override_fonts/mono_font = ExtResource("10_an2yv")
+theme_override_font_sizes/normal_font_size = 8
+theme_override_font_sizes/bold_font_size = 8
+theme_override_font_sizes/bold_italics_font_size = 8
+theme_override_font_sizes/italics_font_size = 8
 bbcode_enabled = true
+text = "test"
+fit_content = true
+scroll_following = true
+scroll_following_visible_characters = true
+script = ExtResource("12_an2yv")
+
+[node name="Label" type="Label" parent="RightPanel"]
+offset_right = 40.0
+offset_bottom = 23.0
+script = ExtResource("13_wxtb8")
 
 [node name="BottomPanel" type="Node2D" parent="."]
 position = Vector2(276, -283)

@@ -10,7 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://cp1c82rfbkupq" path="res://SCENES/platform69.tscn" id="7_j2nwm"]
 [ext_resource type="PackedScene" uid="uid://bmybl5twxi5m6" path="res://SCENES/killzone.tscn" id="8_qf2m7"]
 [ext_resource type="AudioStream" uid="uid://c20p7yilwsnqb" path="res://assets/gloomy-atmosphere-for-trailers-and-movies-179445.mp3" id="9_kegqd"]
-[ext_resource type="Script" uid="uid://ll75cy4hqrbf" path="res://SCENES/node_2d.gd" id="11_r5fas"]
+[ext_resource type="FontFile" uid="uid://2rpibct00qtk" path="res://assets/custum made/Geist/otf/Geist-Bold.otf" id="11_r5fas"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kegqd"]
 size = Vector2(472.6339, 487.0119)
@@ -1445,19 +1445,12 @@ pitch_scale = 1.14
 autoplay = true
 bus = &"sf"
 
-[node name="Node2D" type="Node2D" parent="."]
-position = Vector2(-720.7296, -452.01526)
-scale = Vector2(0.99999994, 0.99999994)
-script = ExtResource("11_r5fas")
-
-[node name="CoinsLabel" type="Label" parent="Node2D"]
-offset_left = 202.49539
-offset_top = 23.992323
-offset_right = 242.49539
-offset_bottom = 46.992325
-
-[node name="FruitsLabel" type="Label" parent="Node2D"]
-offset_left = 242.80247
-offset_top = 45.105568
-offset_right = 282.80246
-offset_bottom = 68.10557
+[node name="CoinsLabel" type="Label" parent="."]
+offset_left = 443.378
+offset_top = -499.9999
+offset_right = 595.378
+offset_bottom = -476.9999
+scale = Vector2(0.3857966, 0.3857966)
+theme_override_fonts/font = ExtResource("11_r5fas")
+theme_override_font_sizes/font_size = 13
+text = "pass = OVERGLADE"
