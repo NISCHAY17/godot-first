@@ -8,8 +8,8 @@ extends Node2D
 @onready var main_welcome_: Node2D = $"../MAIN(WELCOME)"
 @onready var main: Node2D = $"../MAIN"
 
-const CORRECT_USER = "admin"
-const CORRECT_PASS = "evilcrop"
+const CORRECT_USER = "MILKYWAY"
+const CORRECT_PASS = "OVERGLADE"
 
 func _ready():
 	pass_field.secret = true
