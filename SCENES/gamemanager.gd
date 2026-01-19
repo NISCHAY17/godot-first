@@ -2,6 +2,7 @@ extends Node
 
 var score := 0
 var total_fruits := 0
+var keys := 0   #KEYS SUPPORT
 
 # unique fruit IDs
 var collected_fruits := {}
@@ -16,3 +17,7 @@ func add_fruit(fruit_id: String):
 		collected_fruits[fruit_id] = true
 		total_fruits += 1
 		print("[GAME] Fruit collected:", fruit_id, "| Total:", total_fruits)
+
+func add_key():
+	keys += 1
+	print("[GAME] Keys =", keys)
