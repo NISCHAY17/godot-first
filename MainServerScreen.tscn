@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://cnlwlbso8beec"]
+[gd_scene load_steps=15 format=3 uid="uid://cnlwlbso8beec"]
 
 [ext_resource type="Texture2D" uid="uid://ws3wtrvovjva" path="res://assets/custum made/Untitled design (53).png" id="1_doe0h"]
 [ext_resource type="Script" uid="uid://o3j5fx36td2" path="res://left_panel.gd" id="2_xod8n"]
@@ -6,6 +6,12 @@
 [ext_resource type="FontFile" uid="uid://dh2lc3407qq6s" path="res://assets/custum made/Geist/otf/Geist-SemiBold.otf" id="4_iwdhs"]
 [ext_resource type="FontFile" uid="uid://dt3hvrcki8uef" path="res://assets/custum made/Geist/otf/Geist-Regular.otf" id="5_gdgqh"]
 [ext_resource type="FontFile" uid="uid://ci07a5cmx8dw0" path="res://assets/custum made/Geist/otf/Geist-SemiBoldItalic.otf" id="6_3xdlu"]
+[ext_resource type="Texture2D" uid="uid://y03n0n13bqh5" path="res://assets/custum made/evilcrop.png" id="7_g6hpd"]
+[ext_resource type="FontFile" uid="uid://d2rgfhefugn4y" path="res://assets/custum made/Geist/otf/Geist-Black.otf" id="7_gh0rq"]
+[ext_resource type="FontFile" uid="uid://w7a01wihhtpv" path="res://assets/custum made/Geist/otf/Geist-BlackItalic.otf" id="8_g6hpd"]
+[ext_resource type="FontFile" uid="uid://brgu1gv7ptgc4" path="res://assets/custum made/Geist/otf/Geist-RegularItalic.otf" id="9_yxj2f"]
+[ext_resource type="FontFile" uid="uid://d3r32b2xir63x" path="res://assets/custum made/Geist/otf/Geist-LightItalic.otf" id="10_an2yv"]
+[ext_resource type="Script" uid="uid://b3pgetwj4shs4" path="res://bottom_panel.gd" id="12_yxj2f"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sq541"]
 texture = ExtResource("1_doe0h")
@@ -209,19 +215,19 @@ text = "NetLabel"
 [node name="TOP PANEL" type="Node2D" parent="."]
 
 [node name="COMP NAME" type="Label" parent="TOP PANEL"]
-offset_left = -303.0
-offset_top = -393.0
-offset_right = -263.0
-offset_bottom = -370.0
+offset_left = -235.0
+offset_top = -383.0
+offset_right = 121.0
+offset_bottom = -356.0
 theme_override_fonts/font = ExtResource("4_iwdhs")
-theme_override_font_sizes/font_size = 20
+theme_override_font_sizes/font_size = 16
 text = "EVILCROP INTERNAL SERVER NODE  "
 
 [node name="LIVE" type="Label" parent="TOP PANEL"]
 offset_left = 75.0
-offset_top = -393.0
+offset_top = -389.0
 offset_right = 132.0
-offset_bottom = -360.0
+offset_bottom = -356.0
 theme_override_colors/font_color = Color(0.5372549, 1, 0.28235295, 1)
 theme_override_fonts/font = ExtResource("5_gdgqh")
 theme_override_font_sizes/font_size = 24
@@ -229,13 +235,49 @@ text = "LIVE "
 
 [node name="NOT SECURED" type="Label" parent="TOP PANEL"]
 offset_left = 141.0
-offset_top = -393.0
+offset_top = -389.0
 offset_right = 327.0
-offset_bottom = -360.0
+offset_bottom = -356.0
 theme_override_colors/font_color = Color(0.67058825, 0.09803922, 0.14901961, 1)
 theme_override_fonts/font = ExtResource("6_3xdlu")
 theme_override_font_sizes/font_size = 24
 text = "NOT SECURED   "
 
+[node name="Evilcrop" type="Sprite2D" parent="TOP PANEL"]
+position = Vector2(-271.00003, -373.00003)
+scale = Vector2(0.11590901, 0.11590901)
+texture = ExtResource("7_g6hpd")
+
 [node name="RightPanel" type="Node2D" parent="."]
 position = Vector2(276, -283)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="RightPanel"]
+offset_left = -135.0
+offset_right = -95.0
+offset_bottom = 40.0
+scale = Vector2(8.262974, 7.978674)
+theme_override_fonts/normal_font = ExtResource("5_gdgqh")
+theme_override_fonts/bold_font = ExtResource("7_gh0rq")
+theme_override_fonts/bold_italics_font = ExtResource("8_g6hpd")
+theme_override_fonts/italics_font = ExtResource("9_yxj2f")
+theme_override_fonts/mono_font = ExtResource("10_an2yv")
+bbcode_enabled = true
+
+[node name="BottomPanel" type="Node2D" parent="."]
+position = Vector2(276, -283)
+script = ExtResource("12_yxj2f")
+
+[node name="Button" type="Button" parent="BottomPanel"]
+offset_left = -314.0
+offset_top = 361.0
+offset_right = -258.0
+offset_bottom = 392.0
+scale = Vector2(1.3243544, 1.3243544)
+text = "START"
+
+[node name="ProgressBar" type="ProgressBar" parent="BottomPanel"]
+visible = false
+offset_left = -290.0
+offset_top = 381.0
+offset_right = -286.0
+offset_bottom = 408.0

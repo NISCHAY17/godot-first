@@ -1,12 +1,12 @@
 [gd_resource type="AudioBusLayout" format=3 uid="uid://dhgcsx13geh8s"]
 
 [resource]
-bus/0/volume_db = -5.042245
+bus/0/volume_db = -1.9147635
 bus/1/name = &"music"
 bus/1/solo = false
 bus/1/mute = false
 bus/1/bypass_fx = false
-bus/1/volume_db = -14.622803
+bus/1/volume_db = 2.051506
 bus/1/send = &"Master"
 bus/2/name = &"sf"
 bus/2/solo = false

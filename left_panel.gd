@@ -26,6 +26,7 @@ func update_stats():
 		ram_label.text  = format_stat("RAM",  ram,  "%")
 		temp_label.text = format_stat("TEMP", temp, "°C")
 		net_label.text  = format_stat("NET",  net,  "%")
+		
 
 		await get_tree().create_timer(0.9).timeout
 
