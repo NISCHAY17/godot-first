@@ -1431,10 +1431,10 @@ scale = Vector2(0.012890641, 0.012890641)
 texture = ExtResource("5_unrer")
 
 [node name="Status" type="Label" parent="1ST SCENE ( LOGIN )"]
-offset_left = -45.0
-offset_top = 93.0
-offset_right = -5.0
-offset_bottom = 116.0
+offset_left = -89.0
+offset_top = 92.0
+offset_right = -49.0
+offset_bottom = 115.0
 
 [node name="LOADING" type="Node2D" parent="."]
 unique_name_in_owner = true

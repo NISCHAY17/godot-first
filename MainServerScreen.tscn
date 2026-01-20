@@ -157,6 +157,9 @@ sources/0 = SubResource("TileSetAtlasSource_sq541")
 [node name="computer_check" type="Node2D"]
 position = Vector2(-117, -76)
 script = ExtResource("1_yxj2f")
+TEST_MODE = false
+TEST_COINS = 60
+TEST_FRUITS = 7
 
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2(0, 3)
@@ -241,7 +244,7 @@ offset_left = 276.0
 offset_top = -32.0
 offset_right = 333.0
 offset_bottom = 15.0
-theme_override_colors/font_color = Color(0.5372549, 0, 0.28235295, 1)
+theme_override_colors/font_color = Color(0.8334698, 0.87644935, 0.8761173, 1)
 theme_override_fonts/font = ExtResource("6_g6hpd")
 theme_override_font_sizes/font_size = 35
 text = "OS"
@@ -276,7 +279,7 @@ text = "DATA  LOGS  "
 [node name="Label" type="Label" parent="RightPanel"]
 offset_left = -668.0
 offset_top = 286.0
-offset_right = -628.0
+offset_right = -261.0
 offset_bottom = 309.0
 theme_override_fonts/font = ExtResource("8_gh0rq")
 theme_override_font_sizes/font_size = 8

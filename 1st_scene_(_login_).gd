@@ -7,9 +7,11 @@ extends Node2D
 @onready var loading: Node2D = %LOADING
 @onready var main_welcome_: Node2D = $"../MAIN(WELCOME)"
 @onready var main: Node2D = $"../MAIN"
+@export var next_scene := "res://computer_check.tscn"
 
-const CORRECT_USER = "MILKYWAY"
-const CORRECT_PASS = "OVERGLADE"
+
+const CORRECT_USER = "milkyway"
+const CORRECT_PASS = "overglade"
 
 func _ready():
 	pass_field.secret = true
@@ -55,4 +57,6 @@ func transition_to_main():
 	main_welcome_.visible = true
 	await get_tree().create_timer(7.0).timeout
 	main_welcome_.visible = false
+	get_tree().change_scene_to_file(next_scene)
 	main.visible = true 
+	
