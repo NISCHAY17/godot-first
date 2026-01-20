@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://d0cw6itop4aeh"
+path="res://.godot/imported/hacker-by-night-cyberpunk-dark-mysterious-cinematic-191119.mp3-76ffe2d75ca5fbc27b5a9f0968c8394d.mp3str"
+
+[deps]
+
+source_file="res://assets/custum made/musicsfx/hacker-by-night-cyberpunk-dark-mysterious-cinematic-191119.mp3"
+dest_files=["res://.godot/imported/hacker-by-night-cyberpunk-dark-mysterious-cinematic-191119.mp3-76ffe2d75ca5fbc27b5a9f0968c8394d.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

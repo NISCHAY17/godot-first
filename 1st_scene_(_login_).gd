@@ -9,6 +9,7 @@ extends Node2D
 @onready var main: Node2D = $"../MAIN"
 @export var next_scene := "res://MainServerScreen.tscn"
 @onready var click: AudioStreamPlayer = $"../CLICK"
+@onready var computer_startup_music_97699: AudioStreamPlayer2D = $"../ComputerStartupMusic97699"
 
 
 const CORRECT_USER = "milkyway"
@@ -35,6 +36,7 @@ func _on_submit_pressed():
 		status.text = "> ACCESS GRANTED"
 		status.modulate = Color.GREEN
 		print("[LOGIN] ✅ Access granted")
+		computer_startup_music_97699.play()
 
 		await transition_to_main()
 
