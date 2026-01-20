@@ -3,6 +3,7 @@ extends Node2D
 @onready var start_btn: Button = $BottomPanel/Button
 @onready var progress: ProgressBar =$BottomPanel/ProgressBar
 @onready var log_label: Label = $RightPanel/Label
+@onready var clciksfx: AudioStreamPlayer = $clciksfx
 
 
 
@@ -26,6 +27,7 @@ func _ready():
 	progress.visible = false
 	progress.value = 0
 	start_btn.pressed.connect(start_stream)
+	clciksfx.play()
 
 
 

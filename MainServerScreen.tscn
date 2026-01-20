@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://cnlwlbso8beec"]
+[gd_scene load_steps=17 format=3 uid="uid://cnlwlbso8beec"]
 
 [ext_resource type="Texture2D" uid="uid://ws3wtrvovjva" path="res://assets/custum made/Untitled design (53).png" id="1_doe0h"]
 [ext_resource type="Script" uid="uid://bqqkop3vfnxho" path="res://main_server_screen.gd" id="1_yxj2f"]
@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://y03n0n13bqh5" path="res://assets/custum made/evilcrop.png" id="7_g6hpd"]
 [ext_resource type="FontFile" uid="uid://cyj13bdt0lift" path="res://assets/custum made/Geist/otf/Geist-ExtraBold.otf" id="8_gh0rq"]
 [ext_resource type="Script" uid="uid://b3pgetwj4shs4" path="res://bottom_panel.gd" id="12_yxj2f"]
+[ext_resource type="AudioStream" uid="uid://7gyqi78hpp5e" path="res://assets/custum made/musicsfx/sci-fi-retro-style-music-172779.mp3" id="13_an2yv"]
 [ext_resource type="Script" uid="uid://dymmkk6pxuq84" path="res://testforsyslogs.gd" id="13_wxtb8"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sq541"]
@@ -305,3 +306,13 @@ offset_left = -290.0
 offset_top = 381.0
 offset_right = -286.0
 offset_bottom = 408.0
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("13_an2yv")
+volume_db = -12.235
+autoplay = true
+
+[node name="clciksfx" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("13_an2yv")
+volume_db = -12.235
+autoplay = true
