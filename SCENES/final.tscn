@@ -1439,10 +1439,12 @@ position = Vector2(25.911705, -61.420338)
 shape = SubResource("WorldBoundaryShape2D_kegqd")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(-325.33597, -419.38568)
 stream = ExtResource("9_kegqd")
-volume_db = -10.593
+volume_db = -0.193
 pitch_scale = 1.14
 autoplay = true
+max_distance = 69000.0
 bus = &"sf"
 
 [node name="CoinsLabel" type="Label" parent="."]

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://iikvegn5dnns"
+path="res://.godot/imported/computer-mind-244060 (1).mp3-8c26dba932585f5f2293ff2b9a9d8505.mp3str"
+
+[deps]
+
+source_file="res://assets/custum made/musicsfx/computer-mind-244060 (1).mp3"
+dest_files=["res://.godot/imported/computer-mind-244060 (1).mp3-8c26dba932585f5f2293ff2b9a9d8505.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

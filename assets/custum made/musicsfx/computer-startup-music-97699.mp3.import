@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://kklcfoykwgkl"
+path="res://.godot/imported/computer-startup-music-97699.mp3-a0134e092cb2d4ced47061686538cde1.mp3str"
+
+[deps]
+
+source_file="res://assets/custum made/musicsfx/computer-startup-music-97699.mp3"
+dest_files=["res://.godot/imported/computer-startup-music-97699.mp3-a0134e092cb2d4ced47061686538cde1.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

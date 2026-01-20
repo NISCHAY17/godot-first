@@ -1,4 +1,4 @@
-[gd_scene load_steps=301 format=3 uid="uid://5nyd4vqq1v0c"]
+[gd_scene load_steps=303 format=3 uid="uid://5nyd4vqq1v0c"]
 
 [ext_resource type="Texture2D" uid="uid://ws3wtrvovjva" path="res://assets/custum made/Untitled design (53).png" id="1_1rs77"]
 [ext_resource type="FontFile" uid="uid://degh5no4q3oty" path="res://assets/brackeys_platformer_assets/fonts/PixelOperator8-Bold.ttf" id="2_akjg6"]
@@ -296,6 +296,8 @@
 [ext_resource type="Texture2D" uid="uid://c28c17xc5xxxs" path="res://assets/custum made/WELCOME/frame_245_delay-0.03s.png" id="294_0pm3i"]
 [ext_resource type="Texture2D" uid="uid://bfuackhi76gie" path="res://assets/custum made/WELCOME/frame_246_delay-0.03s.png" id="295_id3pn"]
 [ext_resource type="Texture2D" uid="uid://wushqwsafoa4" path="res://assets/custum made/WELCOME/frame_247_delay-0.03s.png" id="296_ikp7r"]
+[ext_resource type="AudioStream" uid="uid://nfklgtun7ny5" path="res://assets/custum made/musicsfx/technology-corporate-430139.mp3" id="297_xrpkj"]
+[ext_resource type="AudioStream" uid="uid://bxx04et0xn30v" path="res://assets/custum made/musicsfx/mouse-click-405462.mp3" id="298_y3lvr"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sq541"]
 texture = ExtResource("1_1rs77")
@@ -1459,3 +1461,11 @@ frame_progress = 0.52494556
 
 [node name="MAIN" type="Node2D" parent="."]
 visible = false
+
+[node name="BGMUSIC" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("297_xrpkj")
+autoplay = true
+
+[node name="CLICK" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("298_y3lvr")
+autoplay = true

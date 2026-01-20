@@ -7,7 +7,8 @@ extends Node2D
 @onready var loading: Node2D = %LOADING
 @onready var main_welcome_: Node2D = $"../MAIN(WELCOME)"
 @onready var main: Node2D = $"../MAIN"
-@export var next_scene := "res://computer_check.tscn"
+@export var next_scene := "res://MainServerScreen.tscn"
+@onready var click: AudioStreamPlayer = $"../CLICK"
 
 
 const CORRECT_USER = "milkyway"
@@ -17,6 +18,7 @@ func _ready():
 	pass_field.secret = true
 	status.text = "> Awaiting credentials..."
 	submit_btn.pressed.connect(_on_submit_pressed)
+	click.play()
 
 func _on_submit_pressed():
 	var user = user_field.text.strip_edges().to_lower()
@@ -50,12 +52,12 @@ func transition_to_main():
 	loading.visible = true
 
 	#  delay
-	await get_tree().create_timer(5.0).timeout
+	await get_tree().create_timer(9.0).timeout
 
 	# Hide loading
 	loading.visible = false
 	main_welcome_.visible = true
-	await get_tree().create_timer(7.0).timeout
+	await get_tree().create_timer(9.0).timeout
 	main_welcome_.visible = false
 	get_tree().change_scene_to_file(next_scene)
 	main.visible = true 
