@@ -1,10 +1,13 @@
-[gd_scene load_steps=16 format=3 uid="uid://brxupq7qm1s4b"]
+[gd_scene load_steps=19 format=3 uid="uid://brxupq7qm1s4b"]
 
+[ext_resource type="Script" uid="uid://dme1taa2lmjp6" path="res://SCENES/success.gd" id="1_1vwrq"]
 [ext_resource type="Texture2D" uid="uid://ws3wtrvovjva" path="res://assets/custum made/Untitled design (53).png" id="1_38mjc"]
 [ext_resource type="Texture2D" uid="uid://wi0ik51uv0c0" path="res://assets/PNGS/MANGO.png" id="2_vj3s3"]
 [ext_resource type="AudioStream" uid="uid://b8thnhj0wbyk1" path="res://assets/custum made/musicsfx/success-videogame-sfx-423626.mp3" id="3_m28nn"]
 [ext_resource type="AudioStream" uid="uid://d1qmu84r2hs6c" path="res://assets/custum made/musicsfx/success-journey-cinematic-trailer-sound-motivational-music-139664.mp3" id="4_qbnos"]
 [ext_resource type="FontFile" uid="uid://degh5no4q3oty" path="res://assets/brackeys_platformer_assets/fonts/PixelOperator8-Bold.ttf" id="5_dca6g"]
+[ext_resource type="FontFile" uid="uid://b6jxgj3w1uwk4" path="res://assets/brackeys_platformer_assets/fonts/PixelOperator8.ttf" id="6_dm0dp"]
+[ext_resource type="AudioStream" uid="uid://dxcc1k1xnx8ov" path="res://assets/custum made/musicsfx/SUCCESSElevenLabs_2026-01-21T12_34_53__s0_v3.mp3" id="8_j3k6c"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vj3s3"]
 texture = ExtResource("1_38mjc")
@@ -275,6 +278,8 @@ _data = {
 }
 
 [node name="SUCCESS" type="Node2D"]
+script = ExtResource("1_1vwrq")
+TYPE_SPEED = 0.055
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_m28nn")
@@ -305,13 +310,7 @@ libraries = {
 }
 autoplay = "new_animation"
 
-[node name="SuccessJourneyCinematicTrailerSoundMotivationalMusic139664" type="AudioStreamPlayer2D" parent="."]
-position = Vector2(568, 425)
-stream = ExtResource("4_qbnos")
-volume_db = -7.2
-autoplay = true
-
-[node name="Label" type="Label" parent="SuccessJourneyCinematicTrailerSoundMotivationalMusic139664"]
+[node name="Label" type="Label" parent="Mango"]
 offset_left = -273.0
 offset_top = -363.0
 offset_right = 291.0
@@ -321,8 +320,29 @@ theme_override_fonts/font = ExtResource("5_dca6g")
 theme_override_font_sizes/font_size = 32
 text = "YOU SAVED THE MANGO"
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="SuccessJourneyCinematicTrailerSoundMotivationalMusic139664/Label"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Mango/Label"]
 libraries = {
 &"": SubResource("AnimationLibrary_1vwrq")
 }
 autoplay = "new_animation"
+
+[node name="SuccessJourneyCinematicTrailerSoundMotivationalMusic139664" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(568, 425)
+stream = ExtResource("4_qbnos")
+volume_db = 1.6
+autoplay = true
+
+[node name="STORY TEXT" type="Label" parent="."]
+offset_left = 496.0
+offset_top = 15.000004
+offset_right = 566.0
+offset_bottom = 38.000004
+scale = Vector2(2.6962872, 2.6077945)
+theme_override_fonts/font = ExtResource("6_dm0dp")
+theme_override_font_sizes/font_size = 8
+text = "STORY"
+autowrap_mode = 3
+
+[node name="Success" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_j3k6c")
+pitch_scale = 1.1
