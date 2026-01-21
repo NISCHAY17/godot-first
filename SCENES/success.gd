@@ -1,11 +1,15 @@
 extends Node2D
 
-var mango: Sprite2D
-var story_label: Label
-var voice: AudioStreamPlayer
+@onready var mango: Sprite2D = $Mango
+@onready var scroll: ScrollContainer = $ScrollContainer
+@onready var story: RichTextLabel = $ScrollContainer/StoryText
+@onready var voice: AudioStreamPlayer = $Success
 
 @export var SHOW_MANGO_TIME := 3.0
 @export var TYPE_SPEED := 0.035
+
+var target_scroll := 0.0
+
 
 const STORY_TEXT := """
 Upload complete.
@@ -38,48 +42,46 @@ You restored a future.
 The mango is free.
 """
 
+
 func _ready():
-	
-	call_deferred("_init_nodes")
-
-func _init_nodes():
-	mango = get_node("Mango")
-	story_label = get_node("STORY TEXT")
-	voice = get_node("Success")
-
-	print("[SUCCESS] mango =", mango)
-	print("[SUCCESS] story_label =", story_label)
-	print("[SUCCESS] voice =", voice)
-
-	if mango == null or story_label == null or voice == null:
-		push_error("One or more nodes not found. Check node names!")
-		return
-
+	mango.visible = true
+	scroll.visible = false
+	story.text = ""
 	start_sequence()
 
 
+func _process(delta):
+	
+	var bar := scroll.get_v_scroll_bar()
+	if bar:
+		bar.value = lerp(bar.value, target_scroll, delta * 10.0)
 
-func start_sequence():
-	mango.visible = true
-	story_label.visible = false
-	story_label.text = ""
 
+func start_sequence() -> void:
 	await get_tree().create_timer(SHOW_MANGO_TIME).timeout
 
+	# Switch to text
 	mango.visible = false
-	story_label.visible = true
+	scroll.visible = true
 
-	voice.play()
+	
+	if voice:
+		voice.play()
+		print("[SUCCESS] Voice started")
 
 	await type_text(STORY_TEXT)
-
-	print("[SUCCESS] Story complete")
-
+	print("[SUCCESS] Story finished")
 
 
 func type_text(text: String) -> void:
-	story_label.text = ""
+	story.text = ""
 
 	for i in text.length():
-		story_label.text += text[i]
+		story.text += text[i]
+
+		
+		var bar := scroll.get_v_scroll_bar()
+		if bar:
+			target_scroll = bar.max_value
+
 		await get_tree().create_timer(TYPE_SPEED).timeout
