@@ -1465,13 +1465,15 @@ visible = false
 
 [node name="BGMUSIC" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("297_xrpkj")
+volume_db = -19.118
 autoplay = true
 
 [node name="CLICK" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("298_y3lvr")
+volume_db = 0.765
 autoplay = true
 
 [node name="ComputerStartupMusic97699" type="AudioStreamPlayer2D" parent="."]
 position = Vector2(-264, -129)
 stream = ExtResource("299_ctjbf")
-volume_db = 6.4
+volume_db = 8.0

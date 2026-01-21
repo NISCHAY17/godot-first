@@ -4,6 +4,7 @@ extends Node2D
 @onready var progress: ProgressBar = $BottomPanel/ProgressBar
 @onready var log_label: Label = $RightPanel/Label
 @onready var clciksfx: AudioStreamPlayer = $clciksfx
+@onready var alarm_siren_sound_effect_type_01294194: AudioStreamPlayer = $AlarmSirenSoundEffectType01294194
 
 
 
@@ -107,7 +108,7 @@ func run_key_check(keys_actual: int):
 
 	
 	progress.value = 100
-	log_label.text = "UPLOAD AUTHORIZED ✅"
+	log_label.text = "UPLOAD AUTHORIZED "
 	print("[SERVER] ✅ Validation complete")
 
 

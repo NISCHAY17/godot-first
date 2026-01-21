@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://cnlwlbso8beec"]
+[gd_scene load_steps=22 format=3 uid="uid://cnlwlbso8beec"]
 
 [ext_resource type="Texture2D" uid="uid://ws3wtrvovjva" path="res://assets/custum made/Untitled design (53).png" id="1_doe0h"]
 [ext_resource type="Script" uid="uid://bqqkop3vfnxho" path="res://main_server_screen.gd" id="1_yxj2f"]
@@ -11,10 +11,11 @@
 [ext_resource type="Texture2D" uid="uid://y03n0n13bqh5" path="res://assets/custum made/evilcrop.png" id="7_g6hpd"]
 [ext_resource type="FontFile" uid="uid://cyj13bdt0lift" path="res://assets/custum made/Geist/otf/Geist-ExtraBold.otf" id="8_gh0rq"]
 [ext_resource type="Script" uid="uid://b3pgetwj4shs4" path="res://bottom_panel.gd" id="12_yxj2f"]
-[ext_resource type="AudioStream" uid="uid://7gyqi78hpp5e" path="res://assets/custum made/musicsfx/sci-fi-retro-style-music-172779.mp3" id="13_an2yv"]
 [ext_resource type="FontFile" uid="uid://bj3b0c2w56qba" path="res://assets/custum made/GeistMono/ttf/GeistMono-Black.ttf" id="13_skmrb"]
 [ext_resource type="Script" uid="uid://dymmkk6pxuq84" path="res://testforsyslogs.gd" id="13_wxtb8"]
+[ext_resource type="AudioStream" uid="uid://bxx04et0xn30v" path="res://assets/custum made/musicsfx/mouse-click-405462.mp3" id="14_m0cw8"]
 [ext_resource type="AudioStream" uid="uid://d0cw6itop4aeh" path="res://assets/custum made/musicsfx/hacker-by-night-cyberpunk-dark-mysterious-cinematic-191119.mp3" id="14_skmrb"]
+[ext_resource type="AudioStream" uid="uid://myfuxibqypdy" path="res://assets/custum made/musicsfx/alarm-siren-sound-effect-type-01-294194.mp3" id="16_m0cw8"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sq541"]
 texture = ExtResource("1_doe0h")
@@ -160,24 +161,24 @@ sources/0 = SubResource("TileSetAtlasSource_sq541")
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m0cw8"]
 bg_color = Color(0.13682574, 0.13682574, 0.13682568, 1)
 border_width_left = 5
-border_width_top = 3
+border_width_top = 5
 border_width_right = 5
-border_width_bottom = 3
+border_width_bottom = 5
 border_color = Color(0.12899202, 0.13622266, 0.21667737, 1)
-border_blend = true
 corner_radius_top_left = 10
 corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ho45u"]
-bg_color = Color(0.19215687, 0.7294118, 0.627451, 1)
+bg_color = Color(0.14626649, 0.5531354, 0.34870434, 1)
 border_color = Color(0.91732556, 0.7336959, 0.882533, 1)
-border_blend = true
 
 [node name="computer_check" type="Node2D"]
 position = Vector2(-117, -76)
 script = ExtResource("1_yxj2f")
+SPEED_COINS = 0.3
+SPEED_FRUITS = 0.6
 
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2(0, 3)
@@ -329,7 +330,7 @@ theme_override_styles/fill = SubResource("StyleBoxFlat_ho45u")
 rounded = true
 
 [node name="clciksfx" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("13_an2yv")
+stream = ExtResource("14_m0cw8")
 volume_db = -12.235
 autoplay = true
 
@@ -337,3 +338,6 @@ autoplay = true
 position = Vector2(-18, -24)
 stream = ExtResource("14_skmrb")
 autoplay = true
+
+[node name="AlarmSirenSoundEffectType01294194" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("16_m0cw8")
