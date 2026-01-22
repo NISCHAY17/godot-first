@@ -65,7 +65,7 @@ func start_sequence():
 
 	await show_messages()
 
-	# ⭐ FINAL TRIGGER AFTER STORY FINISHES
+	
 	trigger_finale()
 
 	print("[SUCCESS] Sequence complete")
