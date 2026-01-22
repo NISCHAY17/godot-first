@@ -176,9 +176,6 @@ border_color = Color(0.91732556, 0.7336959, 0.882533, 1)
 [node name="computer_check" type="Node2D"]
 position = Vector2(-117, -76)
 script = ExtResource("1_yxj2f")
-TEST_MODE = false
-TEST_COINS = 7
-TEST_KEYS = 0
 SPEED_COINS = 0.3
 SPEED_FRUITS = 0.6
 

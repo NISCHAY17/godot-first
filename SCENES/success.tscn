@@ -1,6 +1,5 @@
 [gd_scene load_steps=24 format=3 uid="uid://brxupq7qm1s4b"]
 
-[ext_resource type="Script" uid="uid://dme1taa2lmjp6" path="res://SCENES/success.gd" id="1_1vwrq"]
 [ext_resource type="Texture2D" uid="uid://ws3wtrvovjva" path="res://assets/custum made/Untitled design (53).png" id="1_38mjc"]
 [ext_resource type="Texture2D" uid="uid://wi0ik51uv0c0" path="res://assets/PNGS/MANGO.png" id="2_vj3s3"]
 [ext_resource type="AudioStream" uid="uid://b8thnhj0wbyk1" path="res://assets/custum made/musicsfx/success-videogame-sfx-423626.mp3" id="3_m28nn"]
@@ -9,6 +8,114 @@
 [ext_resource type="FontFile" uid="uid://b1jgwci3eny8l" path="res://assets/custum made/GeistMono/ttf/GeistMono-Bold.ttf" id="7_1vwrq"]
 [ext_resource type="AudioStream" uid="uid://dxcc1k1xnx8ov" path="res://assets/custum made/musicsfx/SUCCESSElevenLabs_2026-01-21T12_34_53__s0_v3.mp3" id="8_j3k6c"]
 [ext_resource type="FontFile" uid="uid://bj3b0c2w56qba" path="res://assets/custum made/GeistMono/ttf/GeistMono-Black.ttf" id="9_j3k6c"]
+
+[sub_resource type="GDScript" id="GDScript_1vwrq"]
+script/source = "extends Node2D
+
+@onready var mango: Sprite2D = $Mango
+@onready var story: Label = $Label
+@onready var voice: AudioStreamPlayer = $VoicePlayer
+
+const START = preload(\"res://SCENES/start.tscn\")
+@export var next_scene := \"res://SCENES/start.tscn\"
+
+@export var SHOW_MANGO_TIME := 3.0
+@export var MESSAGE_HOLD := 0.0
+@export var CLEAR_GAP := 0.0
+@onready var finale: AnimationPlayer = $\"u win/finale\"
+@onready var home_button: Button = $\"u win/HomeButton\"
+@onready var anim: Label = $\"u win\"
+@onready var confetti_green: CPUParticles2D = $CONFETTI/GREEN
+@onready var confetti_red: CPUParticles2D = $CONFETTI/RED
+@onready var confetti_orange: CPUParticles2D = $CONFETTI/ORANGE
+@onready var confetti_YELLOW: CPUParticles2D = $CONFETTI/YELLOW
+@onready var overlay: TextureRect = $TextureRect
+
+var messages := [
+	{
+		\"text\": \"Genome fragments aligned.\\nEncryption dissolved.\\nSignal broadcasted globally.\",
+		\"hold\": 7.5
+	},
+	{
+		\"text\": \"For decades, EVIL CROP controlled food through artificial scarcity.\\nThey patented life itself.\\nEvery seed was tracked.\\nEvery harvest was taxed.\\nEvery farmer was owned.\",
+		\"hold\": 14.5
+	},
+	{
+		\"text\": \"You broke the lock.\\n\\nThe original genome has now been released worldwide.\\nAnyone can grow real mangoes again.\\nNo licenses. No restrictions. No control.\",
+		\"hold\": 13.0
+	},
+	{
+		\"text\": \"Fields will bloom where factories once ruled.\\nSeeds will pass freely between hands.\\nFood belongs to people again.\",
+		\"hold\": 10.0
+	},
+	{
+		\"text\": \"You didn’t just win a game.\\nYou restored a future.\\n\\nTHE MANGO IS FREE.\",
+		\"hold\": 8.0
+	}
+]
+
+
+
+func _ready():
+	home_button.visible = false
+	anim.visible = false
+	start_sequence()
+
+
+func start_sequence():
+	mango.visible = true
+	story.visible = false
+	story.text = \"\"
+
+	await get_tree().create_timer(SHOW_MANGO_TIME).timeout
+
+	mango.visible = false
+	story.visible = true
+
+	if voice:
+		voice.play()
+
+	await show_messages()
+
+	# ⭐ FINAL TRIGGER AFTER STORY FINISHES
+	
+	trigger_finale()
+
+	print(\"[SUCCESS] Sequence complete\")
+
+
+func show_messages() -> void:
+	for block in messages:
+		story.text = block[\"text\"]
+		await get_tree().create_timer(block[\"hold\"]).timeout
+
+		story.text = \"\"
+		await get_tree().create_timer(CLEAR_GAP).timeout
+
+
+func trigger_finale():
+	print(\"[FINAL] Triggering celebration\")
+	home_button.visible = true
+	home_button.disabled = false
+
+
+	if anim:
+		finale.play(\"finale\") 
+		anim.visible = true  
+
+
+	confetti_green.emitting = true
+	confetti_red.emitting = true
+	confetti_orange.emitting = true
+	confetti_YELLOW.emitting = true
+
+
+	if overlay:
+		overlay.visible = false
+
+func _on_home_button_pressed():
+	print(\"HOME BUTTON CLICKED\")
+"
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vj3s3"]
 texture = ExtResource("1_38mjc")
@@ -278,6 +385,33 @@ _data = {
 &"new_animation": SubResource("Animation_dm0dp")
 }
 
+[sub_resource type="Animation" id="Animation_etn6c"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-0.008726646]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.23031491, 0.23031494, 0.23031494, 1)]
+}
+
 [sub_resource type="Animation" id="Animation_j3k6c"]
 resource_name = "new_animation"
 length = 5.0
@@ -306,33 +440,6 @@ tracks/1/keys = {
 "values": [Color(0.23031491, 0.23031494, 0.23031494, 1), Color(0.23031491, 0.23031494, 0.23031494, 1), Color(1, 1, 1, 1)]
 }
 
-[sub_resource type="Animation" id="Animation_etn6c"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:rotation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [-0.008726646]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".:modulate")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(0.23031491, 0.23031494, 0.23031494, 1)]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_seqed"]
 _data = {
 &"RESET": SubResource("Animation_etn6c"),
@@ -344,7 +451,7 @@ _data = [Vector2(0.016194329, 0.23793101), 0.0, 0.0, 0, 0, Vector2(0.99190277, 0
 point_count = 2
 
 [node name="SUCCESS" type="Node2D"]
-script = ExtResource("1_1vwrq")
+script = SubResource("GDScript_1vwrq")
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_m28nn")
@@ -478,7 +585,7 @@ position = Vector2(580, 336)
 scale = Vector2(12.703977, 13.325905)
 emitting = false
 amount = 64
-lifetime = 2.4699999999999998
+lifetime = 2.47
 one_shot = true
 explosiveness = 0.6
 randomness = 0.2
