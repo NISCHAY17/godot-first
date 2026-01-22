@@ -1,87 +1,74 @@
 extends Node2D
 
 @onready var mango: Sprite2D = $Mango
-@onready var scroll: ScrollContainer = $ScrollContainer
-@onready var story: RichTextLabel = $ScrollContainer/StoryText
-@onready var voice: AudioStreamPlayer = $Success
+@onready var story: Label = $StoryLabel
+@onready var voice: AudioStreamPlayer = $VoicePlayer
 
 @export var SHOW_MANGO_TIME := 3.0
-@export var TYPE_SPEED := 0.035
+@export var MESSAGE_HOLD := 2.0
+@export var CLEAR_GAP := 0.6
 
-var target_scroll := 0.0
 
+var messages := [
+	{
+		"text": "Genome fragments aligned.\nEncryption dissolved.\nSignal broadcasted globally.",
+		"hold": 10.0
+	},
+	{
+		"text": "For decades, EVIL CROP controlled food through artificial scarcity.\nThey patented life itself.\nEvery seed was tracked.\nEvery harvest was taxed.\nEvery farmer was owned.",
+		"hold": 13.5
+	},
+	{
+		"text": "You broke the lock.\n\nThe original genome has now been released worldwide.\nAnyone can grow real mangoes again.\nNo licenses. No restrictions. No control.",
+		"hold": 13.0
+	},
+	{
+		"text": "Fields will bloom where factories once ruled.\nSeeds will pass freely between hands.\nFood belongs to people again.",
+		"hold": 12.5
+	},
+	{
+		"text": "You didn’t just win a game.\nYou restored a future.\n\nTHE MANGO IS FREE.",
+		"hold": 14.0
+	}
+]
 
-const STORY_TEXT := """
-Upload complete.
-
-Genome fragments aligned.
-Encryption dissolved.
-Signal broadcasted globally.
-
-The mango genome is free.
-
-For decades, EVIL CROP controlled food through artificial scarcity.
-They patented life itself.
-Every seed was tracked.
-Every harvest was taxed.
-Every farmer was owned.
-
-You broke the lock.
-
-The original genome has now been released worldwide.
-Anyone can grow real mangoes again.
-No licenses. No restrictions. No control.
-
-Fields will bloom where factories once ruled.
-Seeds will pass freely between hands.
-Food belongs to people again.
-
-You didn’t just win a game.
-You restored a future.
-
-The mango is free.
-"""
 
 
 func _ready():
-	mango.visible = true
-	scroll.visible = false
-	story.text = ""
 	start_sequence()
 
 
-func _process(delta):
+func start_sequence():
 	
-	var bar := scroll.get_v_scroll_bar()
-	if bar:
-		bar.value = lerp(bar.value, target_scroll, delta * 10.0)
+	mango.visible = true
+	story.visible = false
+	story.text = ""
 
-
-func start_sequence() -> void:
 	await get_tree().create_timer(SHOW_MANGO_TIME).timeout
 
-	# Switch to text
+	
 	mango.visible = false
-	scroll.visible = true
+	story.visible = true
 
 	
 	if voice:
 		voice.play()
-		print("[SUCCESS] Voice started")
+	await show_messages()
 
-	await type_text(STORY_TEXT)
-	print("[SUCCESS] Story finished")
+	print("[SUCCESS] Sequence complete")
 
 
-func type_text(text: String) -> void:
-	story.text = ""
-
-	for i in text.length():
-		story.text += text[i]
+func show_messages() -> void:
+	for block in messages:
+		story.text = block["text"]
 
 		
-		var bar := scroll.get_v_scroll_bar()
-		if bar:
-			target_scroll = bar.max_value
+		await get_tree().create_timer(block["hold"]).timeout
 
-		await get_tree().create_timer(TYPE_SPEED).timeout
+		
+		story.text = ""
+
+		
+		await get_tree().create_timer(CLEAR_GAP).timeout
+		
+		await get_tree().create_timer(CLEAR_GAP).timeout

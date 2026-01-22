@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://brxupq7qm1s4b"]
+[gd_scene load_steps=19 format=3 uid="uid://brxupq7qm1s4b"]
 
 [ext_resource type="Script" uid="uid://dme1taa2lmjp6" path="res://SCENES/success.gd" id="1_1vwrq"]
 [ext_resource type="Texture2D" uid="uid://ws3wtrvovjva" path="res://assets/custum made/Untitled design (53).png" id="1_38mjc"]
@@ -6,6 +6,7 @@
 [ext_resource type="AudioStream" uid="uid://b8thnhj0wbyk1" path="res://assets/custum made/musicsfx/success-videogame-sfx-423626.mp3" id="3_m28nn"]
 [ext_resource type="AudioStream" uid="uid://d1qmu84r2hs6c" path="res://assets/custum made/musicsfx/success-journey-cinematic-trailer-sound-motivational-music-139664.mp3" id="4_qbnos"]
 [ext_resource type="FontFile" uid="uid://degh5no4q3oty" path="res://assets/brackeys_platformer_assets/fonts/PixelOperator8-Bold.ttf" id="5_dca6g"]
+[ext_resource type="FontFile" uid="uid://b1jgwci3eny8l" path="res://assets/custum made/GeistMono/ttf/GeistMono-Bold.ttf" id="7_1vwrq"]
 [ext_resource type="AudioStream" uid="uid://dxcc1k1xnx8ov" path="res://assets/custum made/musicsfx/SUCCESSElevenLabs_2026-01-21T12_34_53__s0_v3.mp3" id="8_j3k6c"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vj3s3"]
@@ -155,6 +156,21 @@ colors = PackedColorArray(0.8, 1, 0.2, 1, 0.38039216, 0.6666667, 0.07058824, 1, 
 gradient = SubResource("Gradient_vj3s3")
 use_hdr = true
 
+[sub_resource type="Animation" id="Animation_m28nn"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1e-05, 1e-05)]
+}
+
 [sub_resource type="Animation" id="Animation_vj3s3"]
 resource_name = "new_animation"
 length = 3.0
@@ -171,64 +187,10 @@ tracks/0/keys = {
 "values": [Vector2(1e-05, 1e-05), Vector2(0.855, 0.855), Vector2(0.68, 0.68)]
 }
 
-[sub_resource type="Animation" id="Animation_m28nn"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:scale")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(1e-05, 1e-05)]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_qbnos"]
 _data = {
 &"RESET": SubResource("Animation_m28nn"),
 &"new_animation": SubResource("Animation_vj3s3")
-}
-
-[sub_resource type="Animation" id="Animation_dm0dp"]
-resource_name = "new_animation"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:size")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(564, 32)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(-273, -363)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath(".:scale")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0.06, 0.44, 0.94),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector2(1e-05, 1e-05), Vector2(1.3, 1.3), Vector2(1, 1)]
 }
 
 [sub_resource type="Animation" id="Animation_t3vbk"]
@@ -270,6 +232,45 @@ tracks/2/keys = {
 "values": [Vector2(1e-05, 1e-05)]
 }
 
+[sub_resource type="Animation" id="Animation_dm0dp"]
+resource_name = "new_animation"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(564, 32)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-273, -363)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.06, 0.44, 0.94),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1e-05, 1e-05), Vector2(1.3, 1.3), Vector2(1, 1)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_1vwrq"]
 _data = {
 &"RESET": SubResource("Animation_t3vbk"),
@@ -278,7 +279,8 @@ _data = {
 
 [node name="SUCCESS" type="Node2D"]
 script = ExtResource("1_1vwrq")
-TYPE_SPEED = 0.067
+MESSAGE_HOLD = 9.0
+CLEAR_GAP = 1.0
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_m28nn")
@@ -331,16 +333,20 @@ stream = ExtResource("4_qbnos")
 volume_db = 1.6
 autoplay = true
 
-[node name="ScrollContainer" type="ScrollContainer" parent="."]
-offset_left = 321.0
+[node name="StoryText" type="RichTextLabel" parent="."]
+offset_left = 242.0
 offset_top = 16.0
-offset_right = 361.0
-offset_bottom = 56.0
-
-[node name="StoryText" type="RichTextLabel" parent="ScrollContainer"]
-layout_mode = 2
+offset_right = 243.0
+offset_bottom = 16.0
 fit_content = true
 scroll_following = true
+
+[node name="StoryLabel" type="Label" parent="."]
+offset_left = 580.0
+offset_top = 292.0
+offset_right = 581.0
+offset_bottom = 315.0
+theme_override_fonts/font = ExtResource("7_1vwrq")
 
 [node name="VoicePlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("8_j3k6c")
