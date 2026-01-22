@@ -5,30 +5,30 @@ extends Node2D
 @onready var voice: AudioStreamPlayer = $VoicePlayer
 
 @export var SHOW_MANGO_TIME := 3.0
-@export var MESSAGE_HOLD := 2.0
-@export var CLEAR_GAP := 0.6
+@export var MESSAGE_HOLD := 0.0
+@export var CLEAR_GAP := 0.0
 
 
 var messages := [
 	{
 		"text": "Genome fragments aligned.\nEncryption dissolved.\nSignal broadcasted globally.",
-		"hold": 10.0
+		"hold": 7.5
 	},
 	{
 		"text": "For decades, EVIL CROP controlled food through artificial scarcity.\nThey patented life itself.\nEvery seed was tracked.\nEvery harvest was taxed.\nEvery farmer was owned.",
-		"hold": 13.5
+		"hold": 11.5
 	},
 	{
 		"text": "You broke the lock.\n\nThe original genome has now been released worldwide.\nAnyone can grow real mangoes again.\nNo licenses. No restrictions. No control.",
-		"hold": 13.0
+		"hold": 10.0
 	},
 	{
 		"text": "Fields will bloom where factories once ruled.\nSeeds will pass freely between hands.\nFood belongs to people again.",
-		"hold": 12.5
+		"hold": 9.0
 	},
 	{
 		"text": "You didn’t just win a game.\nYou restored a future.\n\nTHE MANGO IS FREE.",
-		"hold": 14.0
+		"hold": 13.0
 	}
 ]
 
