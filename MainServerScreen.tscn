@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://cnlwlbso8beec"]
+[gd_scene load_steps=21 format=3 uid="uid://cnlwlbso8beec"]
 
 [ext_resource type="Texture2D" uid="uid://ws3wtrvovjva" path="res://assets/custum made/Untitled design (53).png" id="1_doe0h"]
 [ext_resource type="Script" uid="uid://bqqkop3vfnxho" path="res://main_server_screen.gd" id="1_yxj2f"]
@@ -10,7 +10,6 @@
 [ext_resource type="FontFile" uid="uid://1tkqcti8lp1o" path="res://assets/custum made/Geist/otf/Geist-ExtraBoldItalic.otf" id="6_g6hpd"]
 [ext_resource type="Texture2D" uid="uid://y03n0n13bqh5" path="res://assets/custum made/evilcrop.png" id="7_g6hpd"]
 [ext_resource type="FontFile" uid="uid://cyj13bdt0lift" path="res://assets/custum made/Geist/otf/Geist-ExtraBold.otf" id="8_gh0rq"]
-[ext_resource type="Script" uid="uid://b3pgetwj4shs4" path="res://bottom_panel.gd" id="12_yxj2f"]
 [ext_resource type="FontFile" uid="uid://bj3b0c2w56qba" path="res://assets/custum made/GeistMono/ttf/GeistMono-Black.ttf" id="13_skmrb"]
 [ext_resource type="Script" uid="uid://dymmkk6pxuq84" path="res://testforsyslogs.gd" id="13_wxtb8"]
 [ext_resource type="AudioStream" uid="uid://bxx04et0xn30v" path="res://assets/custum made/musicsfx/mouse-click-405462.mp3" id="14_m0cw8"]
@@ -177,6 +176,7 @@ border_color = Color(0.91732556, 0.7336959, 0.882533, 1)
 [node name="computer_check" type="Node2D"]
 position = Vector2(-117, -76)
 script = ExtResource("1_yxj2f")
+TEST_KEYS = 0
 SPEED_COINS = 0.3
 SPEED_FRUITS = 0.6
 
@@ -308,7 +308,6 @@ script = ExtResource("13_wxtb8")
 
 [node name="BottomPanel" type="Node2D" parent="."]
 position = Vector2(276, -283)
-script = ExtResource("12_yxj2f")
 
 [node name="Button" type="Button" parent="BottomPanel"]
 offset_left = -314.0

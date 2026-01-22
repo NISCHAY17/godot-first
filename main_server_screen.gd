@@ -5,8 +5,8 @@ extends Node2D
 @onready var log_label: Label = $RightPanel/Label
 @onready var clciksfx: AudioStreamPlayer = $clciksfx
 @onready var alarm_siren_sound_effect_type_01294194: AudioStreamPlayer = $AlarmSirenSoundEffectType01294194
-
-
+@export var fail := "res://SCENES/fail.tscn"
+@export var win := "res://SCENES/success.tscn"
 
 @export var TEST_MODE := true
 
@@ -45,7 +45,7 @@ func start_stream():
 
 	var coins_actual  = TEST_COINS  if TEST_MODE else Gamemanager.score
 	var fruits_actual = TEST_FRUITS if TEST_MODE else Gamemanager.total_fruits
-	var keys_actual   = TEST_KEYS   if TEST_MODE else Gamemanager.keys   # 🔑
+	var keys_actual   = TEST_KEYS   if TEST_MODE else Gamemanager.keys   
 
 	print("[SERVER] Actual → Coins:", coins_actual,
 		  "Fruits:", fruits_actual,

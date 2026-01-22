@@ -1,17 +1,17 @@
-[gd_scene load_steps=24 format=3 uid="uid://brxupq7qm1s4b"]
+[gd_scene load_steps=24 format=3 uid="uid://d2fcgfp7ibrrp"]
 
-[ext_resource type="Script" uid="uid://dme1taa2lmjp6" path="res://SCENES/success.gd" id="1_1vwrq"]
-[ext_resource type="Texture2D" uid="uid://ws3wtrvovjva" path="res://assets/custum made/Untitled design (53).png" id="1_38mjc"]
-[ext_resource type="Texture2D" uid="uid://wi0ik51uv0c0" path="res://assets/PNGS/MANGO.png" id="2_vj3s3"]
-[ext_resource type="AudioStream" uid="uid://b8thnhj0wbyk1" path="res://assets/custum made/musicsfx/success-videogame-sfx-423626.mp3" id="3_m28nn"]
-[ext_resource type="AudioStream" uid="uid://d1qmu84r2hs6c" path="res://assets/custum made/musicsfx/success-journey-cinematic-trailer-sound-motivational-music-139664.mp3" id="4_qbnos"]
-[ext_resource type="FontFile" uid="uid://degh5no4q3oty" path="res://assets/brackeys_platformer_assets/fonts/PixelOperator8-Bold.ttf" id="5_dca6g"]
-[ext_resource type="FontFile" uid="uid://b1jgwci3eny8l" path="res://assets/custum made/GeistMono/ttf/GeistMono-Bold.ttf" id="7_1vwrq"]
-[ext_resource type="AudioStream" uid="uid://dxcc1k1xnx8ov" path="res://assets/custum made/musicsfx/SUCCESSElevenLabs_2026-01-21T12_34_53__s0_v3.mp3" id="8_j3k6c"]
-[ext_resource type="FontFile" uid="uid://bj3b0c2w56qba" path="res://assets/custum made/GeistMono/ttf/GeistMono-Black.ttf" id="9_j3k6c"]
+[ext_resource type="Script" uid="uid://dme1taa2lmjp6" path="res://SCENES/success.gd" id="1_o2svf"]
+[ext_resource type="Texture2D" uid="uid://ws3wtrvovjva" path="res://assets/custum made/Untitled design (53).png" id="2_ekoq1"]
+[ext_resource type="Texture2D" uid="uid://wi0ik51uv0c0" path="res://assets/PNGS/MANGO.png" id="3_4prmw"]
+[ext_resource type="AudioStream" uid="uid://b8thnhj0wbyk1" path="res://assets/custum made/musicsfx/success-videogame-sfx-423626.mp3" id="4_a00gl"]
+[ext_resource type="FontFile" uid="uid://degh5no4q3oty" path="res://assets/brackeys_platformer_assets/fonts/PixelOperator8-Bold.ttf" id="5_5rp25"]
+[ext_resource type="AudioStream" uid="uid://d1qmu84r2hs6c" path="res://assets/custum made/musicsfx/success-journey-cinematic-trailer-sound-motivational-music-139664.mp3" id="6_ksrdw"]
+[ext_resource type="FontFile" uid="uid://b1jgwci3eny8l" path="res://assets/custum made/GeistMono/ttf/GeistMono-Bold.ttf" id="7_rmrk1"]
+[ext_resource type="AudioStream" uid="uid://dxcc1k1xnx8ov" path="res://assets/custum made/musicsfx/SUCCESSElevenLabs_2026-01-21T12_34_53__s0_v3.mp3" id="8_5873u"]
+[ext_resource type="FontFile" uid="uid://bj3b0c2w56qba" path="res://assets/custum made/GeistMono/ttf/GeistMono-Black.ttf" id="9_p3y1v"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vj3s3"]
-texture = ExtResource("1_38mjc")
+texture = ExtResource("2_ekoq1")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -344,7 +344,7 @@ _data = [Vector2(0.016194329, 0.23793101), 0.0, 0.0, 0, 0, Vector2(0.99190277, 0
 point_count = 2
 
 [node name="SUCCESS" type="Node2D"]
-script = ExtResource("1_1vwrq")
+script = ExtResource("1_o2svf")
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_m28nn")
@@ -363,10 +363,10 @@ texture = SubResource("GradientTexture2D_m28nn")
 [node name="Mango" type="Sprite2D" parent="."]
 position = Vector2(580, 336)
 scale = Vector2(1e-05, 1e-05)
-texture = ExtResource("2_vj3s3")
+texture = ExtResource("3_4prmw")
 
 [node name="SuccessVideogameSfx423626" type="AudioStreamPlayer" parent="Mango"]
-stream = ExtResource("3_m28nn")
+stream = ExtResource("4_a00gl")
 autoplay = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Mango"]
@@ -381,7 +381,7 @@ offset_top = -363.0
 offset_right = 291.0
 offset_bottom = -331.0
 scale = Vector2(1e-05, 1e-05)
-theme_override_fonts/font = ExtResource("5_dca6g")
+theme_override_fonts/font = ExtResource("5_5rp25")
 theme_override_font_sizes/font_size = 32
 text = "YOU SAVED THE MANGO"
 
@@ -393,7 +393,7 @@ autoplay = "new_animation"
 
 [node name="SuccessJourneyCinematicTrailerSoundMotivationalMusic139664" type="AudioStreamPlayer2D" parent="."]
 position = Vector2(568, 425)
-stream = ExtResource("4_qbnos")
+stream = ExtResource("6_ksrdw")
 volume_db = 1.6
 autoplay = true
 
@@ -410,7 +410,7 @@ offset_left = 451.0
 offset_top = 321.0
 offset_right = 491.0
 offset_bottom = 344.0
-theme_override_fonts/font = ExtResource("7_1vwrq")
+theme_override_fonts/font = ExtResource("7_rmrk1")
 
 [node name="StoryLabel" type="Label" parent="."]
 visible = false
@@ -419,10 +419,10 @@ offset_top = 288.0
 offset_right = 384.0
 offset_bottom = 311.0
 scale = Vector2(-17.3289, 2.3098826)
-theme_override_fonts/font = ExtResource("7_1vwrq")
+theme_override_fonts/font = ExtResource("7_rmrk1")
 
 [node name="VoicePlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("8_j3k6c")
+stream = ExtResource("8_5873u")
 pitch_scale = 1.04
 
 [node name="u win" type="Label" parent="."]
@@ -432,7 +432,7 @@ offset_top = 277.0
 offset_right = 696.0
 offset_bottom = 361.0
 rotation = -0.008726646
-theme_override_fonts/font = ExtResource("9_j3k6c")
+theme_override_fonts/font = ExtResource("9_p3y1v")
 theme_override_font_sizes/font_size = 64
 text = "u WIN"
 
@@ -478,7 +478,7 @@ position = Vector2(580, 336)
 scale = Vector2(12.703977, 13.325905)
 emitting = false
 amount = 64
-lifetime = 2.4699999999999998
+lifetime = 2.47
 one_shot = true
 explosiveness = 0.6
 randomness = 0.2

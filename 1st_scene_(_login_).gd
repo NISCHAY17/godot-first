@@ -10,6 +10,8 @@ extends Node2D
 @export var next_scene := "res://MainServerScreen.tscn"
 @onready var click: AudioStreamPlayer = $"../CLICK"
 @onready var computer_startup_music_97699: AudioStreamPlayer2D = $"../ComputerStartupMusic97699"
+@export var fail := "res://SCENES/fail.tscn"
+
 
 
 const CORRECT_USER = "milkyway"
