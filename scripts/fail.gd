@@ -31,15 +31,15 @@ var messages := [
 	},
 	{
 		"text": "EVIL CROP noticed the spike.\n\nTheir systems don’t miss anomalies.\nThey don’t forgive mistakes.",
-		"hold": 7.6
+		"hold": 6.6
 	},
 	{
 		"text": "Logs were flagged.\nTraffic was traced.\nAccess patterns correlated.\n\nThey followed the trail back to me.",
-		"hold": 6.8
+		"hold": 8.8
 	},
 	{
 		"text": "I told you to collect everything.\nEvery coin.\nEvery fragment.\nEvery key.\n\nEven one missing piece was enough.",
-		"hold": 7.8
+		"hold": 8.8
 	},
 	{
 		"text": "The genome never decrypted.\nThe lock never broke.\nThe data stayed encrypted.\n\nAnd the servers burned trying.",
@@ -47,7 +47,7 @@ var messages := [
 	},
 	{
 		"text": "Security teams moved fast.\nFaster than we expected.\n\nThey seized the lab.\nThey seized the backups.\nThey seized me.",
-		"hold": 9.8
+		"hold": 7.8
 	},
 	{
 		"text": "I am writing this from a cell.\n\nNDA violations.\nUnauthorized dissemination.\nAttempted biological sabotage.",

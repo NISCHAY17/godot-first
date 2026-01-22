@@ -34,7 +34,7 @@ const START = preload(\"res://SCENES/start.tscn\")
 var messages := [
 	{
 		\"text\": \"Genome fragments aligned.\\nEncryption dissolved.\\nSignal broadcasted globally.\",
-		\"hold\": 7.5
+		\"hold\": 8.0
 	},
 	{
 		\"text\": \"For decades, EVIL CROP controlled food through artificial scarcity.\\nThey patented life itself.\\nEvery seed was tracked.\\nEvery harvest was taxed.\\nEvery farmer was owned.\",
@@ -50,7 +50,7 @@ var messages := [
 	},
 	{
 		\"text\": \"You didn’t just win a game.\\nYou restored a future.\\n\\nTHE MANGO IS FREE.\",
-		\"hold\": 8.0
+		\"hold\": 9.5
 	}
 ]
 
@@ -77,7 +77,7 @@ func start_sequence():
 
 	await show_messages()
 
-	# ⭐ FINAL TRIGGER AFTER STORY FINISHES
+	#  FINAL TRIGGER AFTER STORY FINISHES
 	
 	trigger_finale()
 
@@ -513,10 +513,10 @@ fit_content = true
 scroll_following = true
 
 [node name="Label" type="Label" parent="."]
-offset_left = 451.0
-offset_top = 321.0
-offset_right = 491.0
-offset_bottom = 344.0
+offset_left = 428.0
+offset_top = 308.0
+offset_right = 468.0
+offset_bottom = 331.0
 theme_override_fonts/font = ExtResource("7_1vwrq")
 
 [node name="StoryLabel" type="Label" parent="."]
