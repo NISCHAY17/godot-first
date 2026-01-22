@@ -368,8 +368,6 @@ point_count = 2
 
 [node name="SUCCESS" type="Node2D"]
 script = ExtResource("1_1vwrq")
-MESSAGE_HOLD = 9.0
-CLEAR_GAP = 1.0
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_m28nn")
@@ -380,7 +378,6 @@ layer_0/tile_data = PackedInt32Array(0, 65536, 10, 65536, 65536, 11, 1, 0, 10, 6
 position = Vector2(580, 321)
 
 [node name="TextureRect" type="TextureRect" parent="."]
-visible = false
 offset_right = 64.0
 offset_bottom = 64.0
 scale = Vector2(18.14021, 10.163731)
@@ -432,17 +429,18 @@ fit_content = true
 scroll_following = true
 
 [node name="StoryLabel" type="Label" parent="."]
-offset_left = 408.0
-offset_top = 277.0
-offset_right = 409.0
-offset_bottom = 300.0
+offset_left = 383.0
+offset_top = 288.0
+offset_right = 384.0
+offset_bottom = 311.0
+scale = Vector2(-17.3289, 2.3098826)
 theme_override_fonts/font = ExtResource("7_1vwrq")
 
 [node name="VoicePlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("8_j3k6c")
 pitch_scale = 1.04
 
-[node name="Label" type="Label" parent="."]
+[node name="u win" type="Label" parent="."]
 visible = false
 modulate = Color(0.23031491, 0.23031494, 0.23031494, 1)
 offset_left = 504.0
@@ -454,7 +452,7 @@ theme_override_fonts/font = ExtResource("9_j3k6c")
 theme_override_font_sizes/font_size = 64
 text = "u WIN"
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Label"]
+[node name="finale" type="AnimationPlayer" parent="u win"]
 libraries = {
 &"": SubResource("AnimationLibrary_seqed")
 }
@@ -485,7 +483,7 @@ color = Color(0.1875934, 0.4706449, 0.3527291, 1)
 position = Vector2(580, 336)
 scale = Vector2(12.703977, 13.325905)
 emitting = false
-amount = 12
+amount = 32
 one_shot = true
 explosiveness = 0.6
 randomness = 0.2
@@ -505,6 +503,8 @@ color = Color(0.68105173, 0.20533189, 0.37803444, 1)
 position = Vector2(580, 336)
 scale = Vector2(12.703977, 13.325905)
 emitting = false
+amount = 16
+lifetime = 2.0
 one_shot = true
 explosiveness = 0.6
 randomness = 0.2
