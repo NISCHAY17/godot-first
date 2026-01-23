@@ -4333,7 +4333,7 @@ script = ExtResource("21_m2xw5")
 player_path = NodePath("../PLAYER")
 
 [node name="PLAYER" parent="." instance=ExtResource("1_2sn7y")]
-position = Vector2(582, 470)
+position = Vector2(582, 470.00003)
 scale = Vector2(1.6, 1.6000049)
 
 [node name="Camera2D" type="Camera2D" parent="PLAYER"]
@@ -4530,7 +4530,7 @@ position = Vector2(-1763, -5294)
 position = Vector2(-800, -5297)
 
 [node name="coin65" parent="coin" instance=ExtResource("4_rmssh")]
-position = Vector2(-800, -5297)
+position = Vector2(-1045, -5296)
 
 [node name="coin56" parent="coin" instance=ExtResource("4_rmssh")]
 position = Vector2(-2985, -3170)
