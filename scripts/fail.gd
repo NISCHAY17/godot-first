@@ -107,6 +107,7 @@ func show_messages() -> void:
 
 
 func trigger_finale():
+	Gamemanager.reset()
 	print("[FINAL] Triggering ending")
 
 	home_button.visible = true

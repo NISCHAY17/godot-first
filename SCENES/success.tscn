@@ -94,6 +94,7 @@ func show_messages() -> void:
 
 
 func trigger_finale():
+	Gamemanager.reset()
 	print(\"[FINAL] Triggering celebration\")
 	home_button.visible = true
 	home_button.disabled = false

@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://dqh18rxpbit4h"]
+[gd_scene load_steps=7 format=3 uid="uid://dqh18rxpbit4h"]
 
 [ext_resource type="Texture2D" uid="uid://cp74wxdtp310e" path="res://assets/custum made/tilemaps/Untitled design (54).png" id="1_5jtnb"]
+[ext_resource type="Script" uid="uid://b64f3axqf6xpb" path="res://SCENES/start.gd" id="1_k44bc"]
 [ext_resource type="Texture2D" uid="uid://3srim4sgimh5" path="res://assets/custum made/tilemaps/6.png" id="2_2fh0y"]
 [ext_resource type="Texture2D" uid="uid://b7sbiysmq2c55" path="res://assets/custum made/tilemaps/7.png" id="3_k44bc"]
 
@@ -123,6 +124,7 @@ texture = ExtResource("1_5jtnb")
 sources/0 = SubResource("TileSetAtlasSource_a0tt5")
 
 [node name="start" type="Node2D"]
+script = ExtResource("1_k44bc")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(540, 306)
@@ -141,7 +143,7 @@ texture = ExtResource("2_2fh0y")
 
 [node name="7" type="Sprite2D" parent="."]
 position = Vector2(566, 484.99997)
-scale = Vector2(0.15696011, 0.15696011)
+scale = Vector2(0.097902685, 0.097902685)
 texture = ExtResource("3_k44bc")
 
 [node name="Button" type="Button" parent="."]
@@ -150,5 +152,21 @@ offset_top = 430.0
 offset_right = 466.0
 offset_bottom = 438.0
 scale = Vector2(27.033384, 14.353055)
+mouse_force_pass_scroll_events = false
+theme_override_colors/font_color = Color(0.92941177, 0.92156863, 0.8745098, 1)
+theme_override_colors/font_focus_color = Color(0.9411765, 0.9372549, 0.8980392, 1)
+theme_override_colors/font_pressed_color = Color(0.9254902, 0.91764706, 0.8666667, 1)
+theme_override_colors/font_hover_color = Color(0.92941177, 0.92156863, 0.8745098, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.9254902, 0.91764706, 0.8666667, 1)
+theme_override_colors/font_disabled_color = Color(0.875, 0.875, 0.875, 0.5)
+theme_override_colors/font_outline_color = Color(0.8819366, 0.8819366, 0.88193655, 1)
+theme_override_colors/icon_normal_color = Color(0.9254902, 0.91764706, 0.8666667, 1)
+theme_override_colors/icon_focus_color = Color(0.9254902, 0.91764706, 0.8666667, 1)
+theme_override_colors/icon_pressed_color = Color(0.92941177, 0.92156863, 0.8745098, 1)
+theme_override_colors/icon_hover_color = Color(0.92941177, 0.92156863, 0.8745098, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0.9254902, 0.91764706, 0.8666667, 1)
+theme_override_colors/icon_disabled_color = Color(0.9254902, 0.91764706, 0.8666667, 1)
+theme_override_constants/h_separation = 0
+action_mode = 0
 button_mask = 7
 flat = true
