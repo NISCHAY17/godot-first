@@ -28,4 +28,6 @@ func _on_exit(body):
 func _process(delta):
 	if inside and Input.is_action_just_pressed("ui_accept"):
 		print("[Computer] Opening computer screen")
+
 		get_tree().change_scene_to_file(next_scene)
+		

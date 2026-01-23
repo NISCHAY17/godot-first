@@ -1,4 +1,4 @@
-[gd_scene load_steps=108 format=3 uid="uid://dyuag3bm4uhq4"]
+[gd_scene load_steps=109 format=3 uid="uid://dyuag3bm4uhq4"]
 
 [ext_resource type="PackedScene" uid="uid://bjdw6auvyrjmy" path="res://SCENES/player.tscn" id="1_2sn7y"]
 [ext_resource type="Texture2D" uid="uid://cu468udiuj5cq" path="res://assets/fourSeasonsPlatformer_ [tileset, version 2.0]/background_/desertDungeon_.png" id="1_gihg8"]
@@ -32,6 +32,7 @@
 [ext_resource type="Script" uid="uid://bhf25vqn04aph" path="res://SCENES/tile_map_4.gd" id="21_m2xw5"]
 [ext_resource type="PackedScene" uid="uid://bf6ysgi5ghen" path="res://SCENES/platform3.tscn" id="22_5t354"]
 [ext_resource type="PackedScene" uid="uid://m5kwk4l6yf4w" path="res://SCENES/enemy2.tscn" id="23_wmg3d"]
+[ext_resource type="Script" uid="uid://dyvfa51aokfo3" path="res://SCENES/killzonegame.gd" id="25_tplj5"]
 [ext_resource type="Script" uid="uid://dxgu2s7pc78ms" path="res://scripts/FruitBase.gd" id="25_x3kbu"]
 [ext_resource type="PackedScene" uid="uid://c1kstdwxm3xbq" path="res://SCENES/platform5.tscn" id="28_xrvo1"]
 [ext_resource type="AudioStream" uid="uid://rlcsl07tyfrm" path="res://assets/brackeys_platformer_assets/music/time_for_adventure.mp3" id="36_tplj5"]
@@ -4330,7 +4331,7 @@ script = ExtResource("21_m2xw5")
 player_path = NodePath("../PLAYER")
 
 [node name="PLAYER" parent="." instance=ExtResource("1_2sn7y")]
-position = Vector2(607, 397)
+position = Vector2(-116, -4740)
 scale = Vector2(1.6, 1.6000049)
 
 [node name="Camera2D" type="Camera2D" parent="PLAYER"]
@@ -4342,6 +4343,7 @@ position_smoothing_enabled = true
 [node name="killzone" parent="." instance=ExtResource("5_5m27e")]
 position = Vector2(96, 1041)
 scale = Vector2(1.6, 1.6000049)
+script = ExtResource("25_tplj5")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="killzone"]
 position = Vector2(581.875, 144.37454)

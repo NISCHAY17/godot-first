@@ -21,3 +21,11 @@ func add_fruit(fruit_id: String):
 func add_key():
 	keys += 1
 	print("[GAME] Keys =", keys)
+	
+func reset():
+	score = 0
+	total_fruits = 0
+	keys = 0
+	collected_fruits.clear()
+	all_fruits.clear()
+	print("[GAME] 🔄 GameManager reset")

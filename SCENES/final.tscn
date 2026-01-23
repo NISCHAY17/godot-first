@@ -1,6 +1,7 @@
-[gd_scene load_steps=24 format=3 uid="uid://k5f0c3m3rg6v"]
+[gd_scene load_steps=25 format=3 uid="uid://k5f0c3m3rg6v"]
 
 [ext_resource type="PackedScene" uid="uid://bjdw6auvyrjmy" path="res://SCENES/player.tscn" id="1_d1l83"]
+[ext_resource type="Script" uid="uid://bea350ie3xhd7" path="res://SCENES/final.gd" id="1_jdhnc"]
 [ext_resource type="Texture2D" uid="uid://b3j20hshyd14u" path="res://lab_tileset_LITE/lab_tileset_LITE.png" id="1_uia0n"]
 [ext_resource type="Texture2D" uid="uid://cwsyo38wqr21p" path="res://assets/Foozle_2DT0001_Science_Fiction_Labs_Tileset/Tileset/level_tileset.png" id="2_fix8u"]
 [ext_resource type="Script" uid="uid://nv3eawdbb3hg" path="res://SCENES/compt.gd" id="3_wsuxp"]
@@ -1328,6 +1329,7 @@ size = Vector2(273.23413, 27.274414)
 [node name="final" type="Node2D"]
 position = Vector2(84.00012, 370.99994)
 scale = Vector2(1.042, 1.042)
+script = ExtResource("1_jdhnc")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 z_index = 7
