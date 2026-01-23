@@ -4333,7 +4333,7 @@ script = ExtResource("21_m2xw5")
 player_path = NodePath("../PLAYER")
 
 [node name="PLAYER" parent="." instance=ExtResource("1_2sn7y")]
-position = Vector2(5648, -487.00024)
+position = Vector2(582, 470)
 scale = Vector2(1.6, 1.6000049)
 
 [node name="Camera2D" type="Camera2D" parent="PLAYER"]
