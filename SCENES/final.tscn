@@ -1327,7 +1327,7 @@ size = Vector2(273.23413, 27.274414)
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_kegqd"]
 
 [node name="final" type="Node2D"]
-position = Vector2(84.00012, 370.99994)
+position = Vector2(83, 371)
 scale = Vector2(1.042, 1.042)
 script = ExtResource("1_jdhnc")
 
@@ -1450,11 +1450,11 @@ max_distance = 69000.0
 bus = &"sf"
 
 [node name="CoinsLabel" type="Label" parent="."]
-offset_left = 443.378
-offset_top = -499.9999
-offset_right = 595.378
-offset_bottom = -476.9999
+offset_left = 435.70056
+offset_top = -499.99997
+offset_right = 638.70056
+offset_bottom = -476.99997
 scale = Vector2(0.3857966, 0.3857966)
 theme_override_fonts/font = ExtResource("11_r5fas")
 theme_override_font_sizes/font_size = 13
-text = "pass = OVERGLADE"
+text = "pass = overglade (all lowercase)"
