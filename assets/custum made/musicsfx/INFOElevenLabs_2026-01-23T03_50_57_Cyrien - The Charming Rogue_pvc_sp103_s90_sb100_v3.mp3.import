@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c3xx326l2qdl6"
+path="res://.godot/imported/INFOElevenLabs_2026-01-23T03_50_57_Cyrien - The Charming Rogue_pvc_sp103_s90_sb100_v3.mp3-367d559cf1af32a3b6957a01ac2c19b9.mp3str"
+
+[deps]
+
+source_file="res://assets/custum made/musicsfx/INFOElevenLabs_2026-01-23T03_50_57_Cyrien - The Charming Rogue_pvc_sp103_s90_sb100_v3.mp3"
+dest_files=["res://.godot/imported/INFOElevenLabs_2026-01-23T03_50_57_Cyrien - The Charming Rogue_pvc_sp103_s90_sb100_v3.mp3-367d559cf1af32a3b6957a01ac2c19b9.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
