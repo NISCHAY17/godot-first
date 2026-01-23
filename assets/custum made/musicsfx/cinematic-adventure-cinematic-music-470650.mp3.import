@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dw0tgqnjbb4hj"
+path="res://.godot/imported/cinematic-adventure-cinematic-music-470650.mp3-eb472f5aa4bd0264573f48fc34d73488.mp3str"
+
+[deps]
+
+source_file="res://assets/custum made/musicsfx/cinematic-adventure-cinematic-music-470650.mp3"
+dest_files=["res://.godot/imported/cinematic-adventure-cinematic-music-470650.mp3-eb472f5aa4bd0264573f48fc34d73488.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

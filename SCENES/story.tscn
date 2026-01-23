@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://by2mg45h1cg7d"]
+[gd_scene load_steps=8 format=3 uid="uid://by2mg45h1cg7d"]
 
 [ext_resource type="Script" uid="uid://cjn5tcnodvi0r" path="res://SCENES/story.gd" id="1_6am3p"]
 [ext_resource type="Texture2D" uid="uid://ws3wtrvovjva" path="res://assets/custum made/Untitled design (53).png" id="1_wa6kf"]
 [ext_resource type="AudioStream" uid="uid://c3xx326l2qdl6" path="res://assets/custum made/musicsfx/INFOElevenLabs_2026-01-23T03_50_57_Cyrien - The Charming Rogue_pvc_sp103_s90_sb100_v3.mp3" id="3_wan3a"]
 [ext_resource type="FontFile" uid="uid://3eeuqogncobe" path="res://assets/custum made/Geist/variable/Geist-Italic[wght].ttf" id="4_abvww"]
+[ext_resource type="AudioStream" uid="uid://cs1r6cl1q8l8f" path="res://assets/custum made/musicsfx/epic-cinematic-music-471119.mp3" id="5_jnrxb"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6am3p"]
 texture = ExtResource("1_wa6kf")
@@ -163,11 +164,17 @@ position = Vector2(0, -672)
 zoom = Vector2(-0.09, -0.09)
 
 [node name="Label" type="Label" parent="."]
-offset_left = 4437.0
-offset_top = -2553.0
-offset_right = 5408.0
-offset_bottom = -2134.0
+offset_left = 5164.0
+offset_top = -281.0
+offset_right = 6135.0
+offset_bottom = 138.0
 rotation = 3.1415927
 theme_override_fonts/font = ExtResource("4_abvww")
 theme_override_font_sizes/font_size = 322
 text = "STORY"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_jnrxb")
+volume_db = -12.863
+pitch_scale = 1.25
+autoplay = true
