@@ -340,6 +340,7 @@ _data = {
 
 [node name="SUCCESS" type="Node2D"]
 script = ExtResource("1_o2svf")
+metadata/_edit_horizontal_guides_ = [-679.0, -223.0]
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_m28nn")
